@@ -13,5 +13,15 @@ class City extends Model
     public function cities()
     {
         return $this->belongsTo(Country::class);
+
     }
+
+    public function getCityIdByName($name)
+    {
+        dd('hey');
+        $city = City::where('name', 'LIKE', '%' . $name . '%')
+        ->get();
+        return $city['id'];
+    }
+
 }

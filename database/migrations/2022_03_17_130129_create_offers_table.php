@@ -18,12 +18,11 @@ return new class extends Migration
             $table->integer('user_id');
             $table->integer('departure_id');
             $table->integer('arrival_id');
-            $table->dateTime('departure_time');
-            $table->dateTime('arrival_time');
-            $table->text('text');
-            $table->string('price');
-            $table->integer('size_id');
-            $table->string('status');
+            $table->date('departure_time')->nullable();
+            $table->text('text')->nullable();
+            $table->string('price')->nullable();
+            $table->integer('size_id')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

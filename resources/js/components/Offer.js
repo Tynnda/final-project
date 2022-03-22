@@ -179,7 +179,7 @@ const Offer = () => {
                     )}
                 </div>
 
-                {values?.from?.name && values?.to?.name && (
+                {values.from.name && values.to.name && (
                     <div className="form-part2">
                         <textarea
                             type="text"

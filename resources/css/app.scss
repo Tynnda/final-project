@@ -11,8 +11,10 @@ header {
     display: flex;
     justify-content: space-between;
     position: relative;
+    top: 0;
     height: 12vh;
     background-color: rgb(16, 112, 67);
+    opacity: 1;
 
     .menu-container {
         width: 200px;
@@ -30,15 +32,16 @@ header {
             width: 20vw;
 
             position: absolute;
-            bottom: calc(-100% - 15px);
+            bottom: calc(-100% - 89%);
             right: 0;
             z-index: 10;
+            border-radius: 10px;
 
-            row-gap: 7.5px;
+            // row-gap: 7.5px;
 
             button {
                 width: 85%;
-                background-color: green;
+                background-color: rgb(149, 192, 168);
                 height: 32px;
             }
 
@@ -47,6 +50,7 @@ header {
                 display: flex;
                 justify-content: center;
                 padding: 7.5px 0;
+                background-color: rgb(149, 192, 168);
             }
         }
     }
@@ -56,11 +60,22 @@ ul {
     list-style: none;
 }
 
-.countries {
-    // width: 25em;
-    // height: 15em;
+.list_from_input {
+    display: flex;
+}
 
-    // background-color: rgb(214, 240, 214);
+.countries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 30em;
+    height: 30em;
+    background-color: rgb(149, 192, 168);
+}
+
+.cities {
+    background-color: rgb(202, 240, 219);
+    width: 15em;
 }
 
 .shadow {
@@ -87,21 +102,34 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("images/bg-main.jpg");
-    height: 20em;
-    opacity: 0.8;
+    background-image: url("images/iceland.jpg");
+    // opacity: 0.8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 27em;
+    // row-gap: 10px;
+
+    h1 {
+        color: rgb(8, 8, 7);
+        font-size: 4em;
+        padding: 20px;
+        margin-bottom: 1em;
+        margin-top: 0;
+    }
 }
 
 .main_buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 30em;
+    width: 50em;
     padding: 2em;
 
     button {
         padding: 0.7em;
-        width: 10em;
+        width: 13em;
+        height: 4em;
         background-color: rgb(16, 112, 67);
         color: whitesmoke;
         border-radius: 10px;
@@ -124,8 +152,9 @@ ul {
     flex-direction: column;
     width: 20em;
     background-color: rgb(149, 192, 168);
-    opacity: 0.9;
+    opacity: 0.8;
     padding: 20px;
+    border-radius: 10px;
 
     img {
         width: 4em;
@@ -133,8 +162,8 @@ ul {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
+    position: sticky;
+    // bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,6 +189,27 @@ footer {
     }
 }
 
+.offer-form-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.offer-form {
+    background-color: rgb(149, 192, 168);
+    width: 40em;
+    border-radius: 10px;
+}
+
+.form-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40em;
+    border-style: solid;
+}
+
 .input-container {
     display: flex;
     justify-content: center;
@@ -168,9 +218,9 @@ footer {
 }
 
 input {
-    width: 10em;
+    width: 13em;
     height: 3em;
-    border-radius: 10px;
+    border-radius: 2px;
     margin: 1em;
 }
 
@@ -179,4 +229,28 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    textarea {
+        width: 30em;
+        border-radius: 2px;
+    }
+
+    button {
+        width: 7em;
+        height: 2.5em;
+        margin-bottom: 2em;
+        background-color: rgb(16, 112, 67);
+        color: white;
+    }
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 10em;
+    }
 }

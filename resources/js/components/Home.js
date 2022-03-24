@@ -7,7 +7,10 @@ const Home = () => {
             <div className="main_page">
                 <h1>Share your travel</h1>
                 <div className="main_buttons">
-                    <button>search</button>
+                    <Link to="/search">
+                        <button>search</button>
+                    </Link>
+
                     <Link to="/offer">
                         <button>post</button>
                     </Link>

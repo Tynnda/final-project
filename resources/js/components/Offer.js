@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Offer = () => {
     const [countries, setCountries] = useState([]);
@@ -95,91 +96,99 @@ const Offer = () => {
 
     return (
         <>
-            <form action="" method="post" onSubmit={handleSubmit}>
-                <div className="input-container">
-                    <input
-                        onFocus={() => {
-                            setOpenListFrom(true), setOpenListTo(false);
-                        }}
-                        type="text"
-                        name="departure_id"
-                        onChange={handleChange}
-                        value={values.from.name}
-                        placeholder="from"
-                    />
+            <div className="offer-form-div">
+                <form
+                    className="offer-form"
+                    action=""
+                    method="post"
+                    onSubmit={handleSubmit}
+                >
+                    <div className="form-heading">
+                        <h1>Your offer</h1>
+                    </div>
+                    <div className="input-container">
+                        <input
+                            onFocus={() => {
+                                setOpenListFrom(true), setOpenListTo(false);
+                            }}
+                            type="text"
+                            name="departure_id"
+                            onChange={handleChange}
+                            value={values.from.name}
+                            placeholder="from"
+                        />
 
-                    <input
-                        onFocus={() => {
-                            setOpenListTo(true), setOpenListFrom(false);
-                        }}
-                        type="text"
-                        name="arrival_id"
-                        onChange={handleChange}
-                        value={values.to.name}
-                        placeholder="to"
-                    />
+                        <input
+                            onFocus={() => {
+                                setOpenListTo(true), setOpenListFrom(false);
+                            }}
+                            type="text"
+                            name="arrival_id"
+                            onChange={handleChange}
+                            value={values.to.name}
+                            placeholder="to"
+                        />
 
-                    <input
-                        type="date"
-                        name="date"
-                        value={values.date}
-                        onChange={handleChange}
-                    />
+                        <input
+                            type="date"
+                            name="date"
+                            value={values.date}
+                            onChange={handleChange}
+                        />
 
-                    {openListFrom && (
-                        <ul name="from" className="countries">
-                            {countries.map((element, i) => (
-                                <li
-                                    key={element.id}
-                                    onClick={() => handleClickFrom(element)}
-                                >
-                                    {element.name}
-                                </li>
-                            ))}
-                        </ul>
-                    )}
+                        {openListFrom && (
+                            <ul name="from" className="countries">
+                                {countries.map((element, i) => (
+                                    <li
+                                        key={element.id}
+                                        onClick={() => handleClickFrom(element)}
+                                    >
+                                        {element.name}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
 
-                    {!!cities.length && openListFrom && (
-                        <ul className="cities">
-                            {cities.map((element) => (
-                                <li
-                                    key={element.id}
-                                    onClick={() => citiesClickFrom(element)}
-                                >
-                                    {element.name}
-                                </li>
-                            ))}
-                        </ul>
-                    )}
+                        {!!cities.length && openListFrom && (
+                            <ul className="cities">
+                                {cities.map((element) => (
+                                    <li
+                                        key={element.id}
+                                        onClick={() => citiesClickFrom(element)}
+                                    >
+                                        {element.name}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
 
-                    {openListTo && (
-                        <ul name="to" className="countries">
-                            {countries.map((element, i) => (
-                                <li
-                                    key={element.id}
-                                    onClick={() => handleClickTo(element)}
-                                >
-                                    {element.name}
-                                </li>
-                            ))}
-                        </ul>
-                    )}
+                        {openListTo && (
+                            <ul name="to" className="countries">
+                                {countries.map((element, i) => (
+                                    <li
+                                        key={element.id}
+                                        onClick={() => handleClickTo(element)}
+                                    >
+                                        {element.name}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
 
-                    {!!cities.length && openListTo && (
-                        <ul className="cities">
-                            {cities.map((element) => (
-                                <li
-                                    key={element.id}
-                                    onClick={() => citiesClickTo(element)}
-                                >
-                                    {element.name}
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
+                        {!!cities.length && openListTo && (
+                            <ul className="cities">
+                                {cities.map((element) => (
+                                    <li
+                                        key={element.id}
+                                        onClick={() => citiesClickTo(element)}
+                                    >
+                                        {element.name}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
 
-                {values.from.name && values.to.name && (
                     <div className="form-part2">
                         <textarea
                             type="text"
@@ -187,21 +196,20 @@ const Offer = () => {
                             name="text"
                             value={values.text}
                             onChange={handleChange}
-                        >
-                            Your advertisement
-                        </textarea>
+                            placeholder="your advertisement"
+                        ></textarea>
                         <br />
                         <label>Size</label>
                         {/* <select
-                            name="size"
-                            value={values.size}
-                            onChange={handleChange}
-                        >
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                        </select>
-                        <br /> */}
+                                name="size"
+                                value={values.size}
+                                onChange={handleChange}
+                            >
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                            </select>
+                            <br /> */}
                         <input
                             type="text"
                             name="price"
@@ -211,9 +219,12 @@ const Offer = () => {
                         />
                         <br />
                         <button>save</button>
+                        <Link to="/profile">
+                            <button>to profile</button>
+                        </Link>
                     </div>
-                )}
-            </form>
+                </form>
+            </div>
         </>
     );
 };

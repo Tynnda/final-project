@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,6 +21,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//Route::post('/register', 'RegisterController@store');
+// Route::post('/register', 'RegisterController@store');
 Route::get("/offer", "App\Http\Controllers\CountryController@index");
+Route::get("/search", "App\Http\Controllers\CountryController@search");
+Route::post("/search/offers", "App\Http\Controllers\CountryController@offer");
+Route::get("/search/offers", "App\Http\Controllers\CountryController@list");
 Route::post("/offer/store", 'App\Http\Controllers\CountryController@store');
+Route::get("/profile", 'App\Http\Controllers\CountryController@profile');
+
+
+// Route::get("/search/offers", function () {
+//     $result = Offer::class->allowedFilters('departure')->get();
+//     return $result;
+// });
+

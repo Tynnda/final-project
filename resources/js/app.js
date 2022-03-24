@@ -9,9 +9,11 @@ import axios from "axios";
 import Home from "./components/Home";
 import Login from "./components/Login";
 // import Logout from "./components/Logout";
+import Profile from "./components/Profile";
 
 import Menu from "./components/Menu";
 import Offer from "./components/Offer";
+import Search from "./components/Search";
 
 const App = () => {
     const [user, setUser] = useState(null);
@@ -57,7 +59,10 @@ const App = () => {
 
                 <Routes>
                     <Route exact path="/" element={<Home />} />
+                    <Route exact path="/search" element={<Search />} />
                     <Route exact path="/offer" element={<Offer />} />
+                    <Route exact path="/profile" element={<Profile />} />
+
                     {user ? (
                         ""
                     ) : (

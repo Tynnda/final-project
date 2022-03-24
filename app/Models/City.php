@@ -10,15 +10,20 @@ class City extends Model
 {
     use HasFactory;
 
-    public function cities()
+    public function country()
     {
-        return $this->belongsTo(Country::class);
+        return $this->belongsTo(Country::class, 'country_id', 'id');
+
+    }
+    public function offer()
+    {
+        return $this->hasOne(Offer::class);
 
     }
 
     public function getCityIdByName($name)
     {
-        dd('hey');
+        // dd('hey');
         $city = City::where('name', 'LIKE', '%' . $name . '%')
         ->get();
         return $city['id'];

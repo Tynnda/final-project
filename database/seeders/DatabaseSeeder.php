@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             CountriesSeeder::class,
-            SizeSeeder::class
+            SizeSeeder::class,
+            ImagesSeeder::class
         ]);
     }
 }

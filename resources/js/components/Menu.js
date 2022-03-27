@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Logout from "./Logout";
 import Profile from "./Profile";
+import userImg from "/images/user.png";
+import downImg from "/images/down.png";
 
 const Menu = ({ openMenu, setOpenMenu, handleLogout }) => {
     // const handleLogout = () => {
@@ -23,11 +25,11 @@ const Menu = ({ openMenu, setOpenMenu, handleLogout }) => {
         <div className="menu-container">
             <h2>{user.first_name}</h2>
             <h2>{user.last_name}</h2>
-            <img className="account" src="images/user.png" alt="account" />
+            <img className="account" src={userImg} alt="account" />
             <img
                 onClick={() => setOpenMenu(!openMenu)}
                 className="menu"
-                src="images/menu.png"
+                src={downImg}
                 alt="menu"
             />
             {openMenu && (

@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Offer = () => {
     const [countries, setCountries] = useState([]);
@@ -10,6 +11,29 @@ const Offer = () => {
         country: {},
         city: {},
     });
+
+    const navigate = useNavigate();
+
+    const [sizes, setSizes] = useState([]);
+
+    const [isActive1, setActive1] = useState(false);
+    const [isActive2, setActive2] = useState(false);
+    const [isActive3, setActive3] = useState(false);
+    const [isActive4, setActive4] = useState(false);
+
+    const toggleClass1 = () => {
+        setActive1(!isActive1);
+    };
+    const toggleClass2 = () => {
+        setActive2(!isActive2);
+    };
+    const toggleClass3 = () => {
+        setActive3(!isActive3);
+    };
+    const toggleClass4 = () => {
+        setActive4(!isActive4);
+    };
+
     const [selectionTo, setSelectionTo] = useState({
         country: {},
         city: {},
@@ -21,63 +45,54 @@ const Offer = () => {
         date: "",
         text: "",
         price: "",
+        size: {},
         // size_id: "",
     });
-
-    // const [valueFrom, setValueFrom] = useState("");
-    // const [valueTo, setValueTo] = useState("");
 
     const [openListFrom, setOpenListFrom] = useState(false);
     const [openListTo, setOpenListTo] = useState(false);
 
-    // const [inputFrom, setInputFrom] = useState({
-    //     country: "",
-    //     city: "",
-    // });
-    // const [inputTo, setInputTo] = useState({
-    //     country: "",
-    //     city: "",
-    // });
-
     const fetchData = async () => {
         const response = await axios.get("/api/offer");
-        console.log(response);
         setCountries(response.data);
     };
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+    const fetchSizes = async () => {
+        const response = await axios.get("/api/sizes");
+        console.log(response.data);
+        setSizes(response.data);
+    };
+
+    useEffect(
+        () => {
+            fetchData(), fetchSizes();
+        },
+        [],
+        []
+    );
 
     const handleClickFrom = (element) => {
-        console.log(element);
         setSelectionFrom(element);
         setCities(element.cities);
     };
     const handleClickTo = (element) => {
-        console.log(element);
         setSelectionTo(element);
         setCities(element.cities);
     };
 
-    // const handleChangeFrom = (e) => {
-    //     setInputFrom({ ...input, [e.target.name]: e.target.value });
-    // };
-    // const handleChangeTo = (e) => {
-    //     setInputTo({ ...input, [e.target.name]: e.target.value });
-    // };
-
     const citiesClickFrom = (element) => {
-        console.log(element.name);
         setValues({ ...values, from: element });
         setOpenListFrom(false);
         setOpenListTo(true);
     };
     const citiesClickTo = (element) => {
-        console.log(element.name);
         setValues({ ...values, to: element });
         setOpenListTo(false);
     };
+
+    // const sizeClick = (element) => {
+    //     setSizes({ ...values, size: element });
+    // };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -99,42 +114,96 @@ const Offer = () => {
             <div className="offer-form-div">
                 <form
                     className="offer-form"
-                    action=""
                     method="post"
                     onSubmit={handleSubmit}
                 >
                     <div className="form-heading">
-                        <h1>Your offer</h1>
+                        <h1>Post your offer</h1>
                     </div>
                     <div className="input-container">
-                        <input
-                            onFocus={() => {
-                                setOpenListFrom(true), setOpenListTo(false);
-                            }}
-                            type="text"
-                            name="departure_id"
-                            onChange={handleChange}
-                            value={values.from.name}
-                            placeholder="from"
-                        />
+                        <div className="offer-inputs">
+                            <input
+                                onFocus={() => {
+                                    setOpenListFrom(true), setOpenListTo(false);
+                                }}
+                                type="text"
+                                name="departure_id"
+                                onChange={handleChange}
+                                value={values.from.name}
+                                placeholder="from"
+                            />
 
-                        <input
-                            onFocus={() => {
-                                setOpenListTo(true), setOpenListFrom(false);
-                            }}
-                            type="text"
-                            name="arrival_id"
-                            onChange={handleChange}
-                            value={values.to.name}
-                            placeholder="to"
-                        />
+                            <input
+                                onFocus={() => {
+                                    setOpenListTo(true), setOpenListFrom(false);
+                                }}
+                                type="text"
+                                name="arrival_id"
+                                onChange={handleChange}
+                                value={values.to.name}
+                                placeholder="to"
+                            />
 
-                        <input
-                            type="date"
-                            name="date"
-                            value={values.date}
-                            onChange={handleChange}
-                        />
+                            <input
+                                type="date"
+                                name="date"
+                                value={values.date}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <h4>How much space do you offer?</h4>
+                        <div className="form-images-container">
+                            {/* {sizes.map((element, i) => (
+                                <div key={i}>
+                                    <input
+                                        className="hidden-input"
+                                        type="text"
+                                        name="size"
+                                        value={values.size}
+                                        onChange={handleChange}
+                                    />
+                                    <img
+                                        className={
+                                            isActive
+                                                ? "form-images2"
+                                                : "form-images"
+                                        }
+                                        onClick={toggleClass}
+                                        src={element.value}
+                                        alt="icon"
+                                    />
+                                </div>
+                            ))} */}
+
+                            <img
+                                src="images/pocket.png"
+                                className={
+                                    isActive1 ? "form-images2" : "form-images"
+                                }
+                                onClick={toggleClass1}
+                            />
+                            <img
+                                src="images/backpack.png"
+                                className={
+                                    isActive2 ? "form-images3" : "form-images4"
+                                }
+                                onClick={toggleClass2}
+                            />
+                            <img
+                                src="images/luggage.png"
+                                className={
+                                    isActive3 ? "form-images5" : "form-images6"
+                                }
+                                onClick={toggleClass3}
+                            />
+                            <img
+                                src="images/suitcase.png"
+                                className={
+                                    isActive4 ? "form-images7" : "form-images8"
+                                }
+                                onClick={toggleClass4}
+                            />
+                        </div>
 
                         {openListFrom && (
                             <ul name="from" className="countries">
@@ -199,17 +268,7 @@ const Offer = () => {
                             placeholder="your advertisement"
                         ></textarea>
                         <br />
-                        <label>Size</label>
-                        {/* <select
-                                name="size"
-                                value={values.size}
-                                onChange={handleChange}
-                            >
-                                <option>S</option>
-                                <option>M</option>
-                                <option>L</option>
-                            </select>
-                            <br /> */}
+
                         <input
                             type="text"
                             name="price"
@@ -219,9 +278,6 @@ const Offer = () => {
                         />
                         <br />
                         <button>save</button>
-                        <Link to="/profile">
-                            <button>to profile</button>
-                        </Link>
                     </div>
                 </form>
             </div>

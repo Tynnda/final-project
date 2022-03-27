@@ -23,7 +23,7 @@ class CountryController extends Controller
         $offer->departure_time = $request->input('date');
         $offer->text = $request->input('text');
         $offer->price = $request->input('price');
-        // $offer->size_id = $request->input("size")['id'];
+        // $offer->size_id = $request->input('size')['id'];
         $offer->save();
 
 
@@ -34,7 +34,7 @@ class CountryController extends Controller
             'departure_time' => $request->input('date'),
             'text' => $request->input('text'),
             'price' => $request->input('price'),
-            // 'size_id' => $request->input("size")['id']
+            // 'size_id' => $request->input('size')['id']
         ];
 
     }

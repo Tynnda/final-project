@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('sizes', function (Blueprint $table) {
             $table->id();
-            $table->string('value');
+            $table->string('value')->nullable();
             $table->timestamps();
         });
     }

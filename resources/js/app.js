@@ -14,6 +14,8 @@ import Profile from "./components/Profile";
 import Menu from "./components/Menu";
 import Offer from "./components/Offer";
 import Search from "./components/Search";
+import Chat from "./components/Chat";
+import logoImg from "/images/logo.png";
 
 const App = () => {
     const [user, setUser] = useState(null);
@@ -37,7 +39,7 @@ const App = () => {
         <BrowserRouter>
             <header>
                 <Link to="/">
-                    <img className="logo" src="images/logo.png" />
+                    <img className="logo" src={logoImg} />
                 </Link>
                 <nav>
                     {user ? "" : <Link to="/register">Register</Link>}
@@ -59,6 +61,7 @@ const App = () => {
 
                 <Routes>
                     <Route exact path="/" element={<Home />} />
+                    <Route exact path="/chat/:offer_id" element={<Chat />} />
                     <Route exact path="/search" element={<Search />} />
                     <Route exact path="/offer" element={<Offer />} />
                     <Route exact path="/profile" element={<Profile />} />
@@ -93,9 +96,9 @@ const App = () => {
                     <a href="">Contact</a>
                 </div>
                 <div className="footer_images">
-                    <img src="images/paypal.svg" alr="" />
-                    <img src="images/github.svg" alr="" />
-                    <img src="images/linkedin.svg" alr="" />
+                    <img src="images/paypal.svg" alt="" />
+                    <img src="images/github.svg" alt="" />
+                    <img src="images/linkedin.svg" alt="" />
                 </div>
             </footer>
         </BrowserRouter>

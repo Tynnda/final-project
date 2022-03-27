@@ -25,6 +25,9 @@ header .menu-container {
        column-gap: 30px;
   padding: 7.5px 30px;
 }
+header .menu-container .menu {
+  width: 2em;
+}
 header .menu-container ul {
   margin: 0;
   padding: 0;
@@ -63,12 +66,19 @@ ul {
   justify-content: space-around;
   width: 30em;
   height: 30em;
-  background-color: #95c0a8;
+  background-color: #d2ffe6;
+  position: absolute;
+  z-index: 1;
+  top: 16em;
 }
 
 .cities {
-  background-color: #caf0db;
+  background-color: #96ddb6;
   width: 15em;
+  position: absolute;
+  z-index: 1;
+  top: 16em;
+  left: 51.25em;
 }
 
 .shadow {
@@ -178,15 +188,17 @@ footer {
 
 .offer-form-div {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  background-color: white;
 }
 
 .offer-form {
-  background-color: #95c0a8;
+  background-color: #e9e3e3;
   width: 40em;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
 .form-heading {
@@ -194,12 +206,13 @@ footer {
   justify-content: center;
   align-items: center;
   width: 40em;
-  border-style: solid;
 }
 
 .input-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 1em;
 }
 
@@ -228,6 +241,13 @@ input {
   color: white;
 }
 
+.offer-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .profile-container {
   display: flex;
   flex-direction: row-reverse;
@@ -236,6 +256,140 @@ input {
 }
 .profile-container img {
   width: 10em;
+  height: 10em;
+}
+
+.offer-container {
+  background-color: #87af99;
+  margin: 2em;
+  width: 50em;
+}
+
+.offer-name-image {
+  display: flex;
+  justify-content: space-around;
+  width: 18em;
+}
+.offer-name-image img {
+  width: 7em;
+  height: 7em;
+  padding: 20px;
+}
+
+.offer-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-part1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.offer-text {
+  background-color: #c2d6c7;
+  width: 40em;
+  margin-left: 5em;
+}
+
+.offer-button-price {
+  display: flex;
+  flex-direction: column;
+}
+.offer-button-price button {
+  background-color: #5e75f8;
+  color: white;
+}
+
+.search-inputs {
+  display: flex;
+  justify-content: center;
+}
+
+.form-images-container {
+  display: flex;
+  justify-content: space-around;
+  width: 25em;
+}
+
+.form-images {
+  width: 4em;
+  display: flex;
+  background-color: white;
+  opacity: 1;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.form-images2 {
+  width: 4em;
+  display: flex;
+  background-color: #bfc7f5;
+  opacity: 1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form-images3 {
+  width: 4em;
+  display: flex;
+  background-color: #bfc7f5;
+  opacity: 1;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.form-images4 {
+  width: 4em;
+  display: flex;
+  background-color: white;
+  opacity: 1;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.form-images5 {
+  width: 4em;
+  display: flex;
+  background-color: #bfc7f5;
+  opacity: 1;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.form-images6 {
+  width: 4em;
+  display: flex;
+  background-color: white;
+  opacity: 1;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.form-images7 {
+  width: 4em;
+  display: flex;
+  background-color: #bfc7f5;
+  opacity: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  opacity: 0.8;
+}
+
+.form-images8 {
+  width: 4em;
+  display: flex;
+  background-color: white;
+  opacity: 1;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=app.css.map*/

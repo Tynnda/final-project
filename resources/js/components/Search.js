@@ -29,6 +29,9 @@ const Search = () => {
         dateTo: "",
     });
 
+    // loading gif
+    const [loading, setLoading] = useState(false);
+
     const [openListFrom, setOpenListFrom] = useState(false);
     const [openListTo, setOpenListTo] = useState(false);
 
@@ -39,6 +42,7 @@ const Search = () => {
     };
 
     const fetchData2 = async () => {
+        setLoading(true);
         const response = await axios.post("/api/search/offers", {
             from: values.from,
             to: values.to,
@@ -47,11 +51,14 @@ const Search = () => {
         });
         console.log(response.data);
         setSearchResults(response.data);
+        setLoading(false);
     };
 
     const fetchData3 = async () => {
+        setLoading(true);
         const response = await axios.get("/api/search/offers");
         setSearchResults(response.data);
+        setLoading(false);
     };
 
     useEffect(() => {
@@ -92,59 +99,49 @@ const Search = () => {
 
     return (
         <>
-            <input
-                onFocus={() => {
-                    setOpenListFrom(true), setOpenListTo(false);
-                }}
-                type="text"
-                name="departure_id"
-                onChange={handleChange}
-                value={values.from.name}
-                placeholder="from"
+            <div className="search-inputs">
+                <input
+                    onFocus={() => {
+                        setOpenListFrom(true), setOpenListTo(false);
+                    }}
+                    type="text"
+                    name="departure_id"
+                    onChange={handleChange}
+                    value={values.from.name}
+                    placeholder="from"
+                />
+
+                <input
+                    onFocus={() => {
+                        setOpenListTo(true), setOpenListFrom(false);
+                    }}
+                    type="text"
+                    name="arrival_id"
+                    onChange={handleChange}
+                    value={values.to.name}
+                    placeholder="to"
+                />
+
+                <input
+                    type="date"
+                    name="dateFrom"
+                    value={values.dateFrom}
+                    onChange={handleChange}
+                />
+
+                <input
+                    type="date"
+                    name="dateTo"
+                    value={values.dateTo}
+                    onChange={handleChange}
+                />
+            </div>
+
+            <ListOffer
+                fetchData2={fetchData2}
+                searchResults={searchResults}
+                loading={loading}
             />
-
-            <input
-                onFocus={() => {
-                    setOpenListTo(true), setOpenListFrom(false);
-                }}
-                type="text"
-                name="arrival_id"
-                onChange={handleChange}
-                value={values.to.name}
-                placeholder="to"
-            />
-
-            <input
-                type="date"
-                name="dateFrom"
-                value={values.dateFrom}
-                onChange={handleChange}
-            />
-
-            <input
-                type="date"
-                name="dateTo"
-                value={values.dateTo}
-                onChange={handleChange}
-            />
-
-            <ListOffer fetchData2={fetchData2} searchResults={searchResults} />
-            {/* <button onClick={fetchData2}>search</button>
-            {searchResults.map((item, i) => (
-                <tr key={i}>
-                    <th>{item.user.first_name}</th>
-                    <th>{item.departure.country.name}</th>
-
-                    <th>{item.departure.name}</th>
-                    <th>{item.arrival.country.name}</th>
-
-                    <th>{item.arrival.name}</th>
-                    <th>{item.departure_time}</th>
-                    <th>{item.text}</th>
-                    <th>{item.price}</th>
-                    <button>send a message</button>
-                </tr>
-            ))} */}
 
             <div className="list_from_input">
                 {openListFrom && (

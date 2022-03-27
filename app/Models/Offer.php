@@ -35,7 +35,7 @@ class Offer extends Model
 
     public function size(){
 
-        return $this->belongsTo(Size::class);
+        return $this->belongsTo(Size::class, 'size_id', 'id');
 
     }
 }

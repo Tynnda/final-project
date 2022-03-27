@@ -16,10 +16,9 @@ return new class extends Migration
         Schema::create('chats', function (Blueprint $table) {
             $table->id();
             $table->integer('offer_id');
-            $table->integer('reply_user_id');
-            $table->integer('offer_user_id');
-            $table->text('text');
-            $table->dateTime('time');
+            $table->integer('user_id');
+            $table->text('text')->nullable();
+            $table->dateTime('time')->nullable();
             $table->timestamps();
         });
     }

@@ -26,6 +26,10 @@ header {
         column-gap: 30px;
         padding: 7.5px 30px;
 
+        .menu {
+            width: 2em;
+        }
+
         ul {
             margin: 0;
             padding: 0;
@@ -64,18 +68,27 @@ ul {
     display: flex;
 }
 
+// list of countries and cities from searchbar and offer
+
 .countries {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 30em;
     height: 30em;
-    background-color: rgb(149, 192, 168);
+    background-color: rgb(210, 255, 230);
+    position: absolute;
+    z-index: 1;
+    top: 16em;
 }
 
 .cities {
-    background-color: rgb(202, 240, 219);
+    background-color: rgb(150, 221, 182);
     width: 15em;
+    position: absolute;
+    z-index: 1;
+    top: 16em;
+    left: 51.25em;
 }
 
 .shadow {
@@ -191,15 +204,17 @@ footer {
 
 .offer-form-div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    background-color: white;
 }
 
 .offer-form {
-    background-color: rgb(149, 192, 168);
+    background-color: rgb(233, 227, 227);
     width: 40em;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
 .form-heading {
@@ -207,12 +222,13 @@ footer {
     justify-content: center;
     align-items: center;
     width: 40em;
-    border-style: solid;
 }
 
 .input-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     // width: 50em;
     padding: 1em;
 }
@@ -244,6 +260,13 @@ input {
     }
 }
 
+.offer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .profile-container {
     display: flex;
     flex-direction: row-reverse;
@@ -252,5 +275,163 @@ input {
 
     img {
         width: 10em;
+        height: 10em;
     }
 }
+
+.offer-container {
+    background-color: rgb(135, 175, 153);
+    margin: 2em;
+    width: 50em;
+}
+
+.offer-name-image {
+    display: flex;
+    justify-content: space-around;
+    width: 18em;
+
+    img {
+        width: 7em;
+        height: 7em;
+        padding: 20px;
+    }
+}
+
+.offer-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-part1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.offer-text {
+    background-color: rgb(194, 214, 199);
+
+    width: 40em;
+    margin-left: 5em;
+}
+
+.offer-button-price {
+    display: flex;
+    flex-direction: column;
+
+    button {
+        background-color: rgb(94, 117, 248);
+        color: white;
+    }
+}
+
+// search inputs
+
+.search-inputs {
+    display: flex;
+    justify-content: center;
+}
+
+// form images toggle onclick
+
+.form-images-container {
+    display: flex;
+    justify-content: space-around;
+    width: 25em;
+}
+
+.form-images {
+    width: 4em;
+    display: flex;
+    background-color: white;
+    opacity: 1;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+.form-images2 {
+    width: 4em;
+    display: flex;
+    background-color: rgb(191, 199, 245);
+    opacity: 1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-images3 {
+    width: 4em;
+    display: flex;
+    background-color: rgb(191, 199, 245);
+    opacity: 1;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+.form-images4 {
+    width: 4em;
+    display: flex;
+    background-color: white;
+    opacity: 1;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+.form-images5 {
+    width: 4em;
+    display: flex;
+    background-color: rgb(191, 199, 245);
+    opacity: 1;
+    padding: 10px;
+    border-radius: 5px;
+
+    opacity: 0.8;
+}
+
+.form-images6 {
+    width: 4em;
+    display: flex;
+    background-color: white;
+    opacity: 1;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+.form-images7 {
+    width: 4em;
+    display: flex;
+    background-color: rgb(191, 199, 245);
+    opacity: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: solid;
+    opacity: 0.8;
+}
+
+.form-images8 {
+    width: 4em;
+    display: flex;
+    background-color: white;
+    opacity: 1;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+// .hidden-input {
+//     visibility: hidden;
+//     position: absolute;
+//     width: 4em;
+//     top: 20em;
+// }
+
+// .img-onclick {
+//     border-style: solid;
+// }
+
+// input[type="radio"]:checked + label > img {
+//     border: 1px solid #fff;
+//     box-shadow: 0 0 3px 3px #090;
+// }

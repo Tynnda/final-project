@@ -35,20 +35,37 @@ const Profile = () => {
                     <img src="images/user.png" />
                 </div>
             </div>
-            <div>
+            <div className="offer-list">
+                {/* <button onClick={fetchData2}>search</button> */}
                 {searchResults.map((item, i) => (
-                    <tr key={i}>
-                        <th>{item.user.first_name}</th>
-                        <th>{item.departure.country.name}</th>
-
-                        <th>{item.departure.name}</th>
-                        <th>{item.arrival.country.name}</th>
-
-                        <th>{item.arrival.name}</th>
-                        <th>{item.departure_time}</th>
-                        <th>{item.text}</th>
-                        <th>{item.price}</th>
-                    </tr>
+                    <div className="offer-container" key={i}>
+                        <div className="offer-part1">
+                            <div className="offer-name-image">
+                                <img src="images/user.png" />
+                                <h3>
+                                    {item.user.first_name} {item.user.last_name}
+                                </h3>
+                            </div>
+                            <div className="offer-details">
+                                <h4>{item.departure_time}</h4>
+                                <h4>
+                                    from: {item.departure.country.name} {"->"}{" "}
+                                    {item.departure.name}{" "}
+                                </h4>
+                                <h4>
+                                    to: {item.arrival.country.name} {"->"}{" "}
+                                    {item.arrival.name}{" "}
+                                </h4>
+                            </div>
+                        </div>
+                        <div className="offer-text">
+                            <p>{item.text}</p>
+                        </div>
+                        <div className="offer-button-price">
+                            <h4>price: {item.price}</h4>
+                            <button>send a message</button>
+                        </div>
+                    </div>
                 ))}
             </div>
         </>

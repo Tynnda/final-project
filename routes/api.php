@@ -27,7 +27,8 @@ Route::get("/search", "App\Http\Controllers\CountryController@search");
 Route::post("/search/offers", "App\Http\Controllers\CountryController@offer");
 Route::get("/search/offers", "App\Http\Controllers\CountryController@list");
 Route::post("/offer/store", 'App\Http\Controllers\CountryController@store');
-Route::get("/profile", 'App\Http\Controllers\CountryController@profile');
+Route::get("/my_profile", 'App\Http\Controllers\CountryController@profile');
+Route::get("/profile/{user_id}", 'App\Http\Controllers\CountryController@profileById');
 
 // chat
 Route::get("/messages", 'App\Http\Controllers\ChatController@showMessages');
@@ -36,6 +37,7 @@ Route::post("/saveMessage", 'App\Http\Controllers\ChatController@saveMessage');
 // sizes
 Route::get("/sizes", 'App\Http\Controllers\SizesController@showSizes');
 
+Route::get("/reviews/{user_id}", 'App\Http\Controllers\ReviewController@getReviewsById');
 
 
 

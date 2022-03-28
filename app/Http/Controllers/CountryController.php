@@ -126,4 +126,18 @@ class CountryController extends Controller
 
 
     }
+
+    public function profileById(Request $request) {
+
+        // $users = User::with('offers')->get();
+        
+        // $user = User::where('user_id', Auth::user()->id)->where('status', 'Completed')->get();
+        $user = Offer::where('user_id', $request['user_id'])->with('user', 'departure', 'arrival')->get();
+        // dd($user);
+
+        return $user;
+
+
+    }
+
 }

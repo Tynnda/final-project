@@ -11,7 +11,7 @@ import {
     faStar as farStar,
 } from "@fortawesome/free-regular-svg-icons";
 
-const StarRating = ({}) => {
+const StarRating = ({ avg_value = 0 }) => {
     const icons = {
         star: {
             complete: faStar,
@@ -33,7 +33,7 @@ const StarRating = ({}) => {
         <div>
             <div>
                 <PrettyRating
-                    value={4.5}
+                    value={avg_value}
                     icons={icons.star}
                     colors={colors.star}
                 />

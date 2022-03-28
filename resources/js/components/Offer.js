@@ -99,7 +99,7 @@ const Offer = () => {
 
         const axios_response = await axios.post("/api/offer/store", values);
 
-        navigate("/profile");
+        navigate("/my_profile");
     };
 
     const handleChange = (event) => {

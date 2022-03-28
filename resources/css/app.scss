@@ -1,26 +1,16 @@
 //Sass
 // $my_font: Arial;
-$main_color: #1eafed;
+$first_color: #1eafed;
+$second_color: #68c2e9;
+$third_color: white;
 
 //header
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: $third_color;
     align-items: center;
-    padding: 0 50px;
-
-    a:hover {
-        background-color: #fb3958;
-    }
-
-    &__offers {
-        display: flex;
-
-        .icon {
-            margin: 0 5px 0 15px;
-        }
-    }
+    padding: 0.5em 4em;
 
     &__menu {
         display: flex;
@@ -28,30 +18,118 @@ $main_color: #1eafed;
 
         .icon {
             margin: 0 5px 0 15px;
-            font-size: 50px;
+            font-size: 1.5em;
+            margin: 0;
+            padding-left: 10px;
+        }
+
+        .user {
+            margin: 0 5px 0 15px;
+            font-size: 4em;
             margin: 0;
             padding-left: 10px;
         }
     }
 
     &__hamburger {
+        background-color: $third_color;
         display: flex;
         flex-direction: column;
         margin: 0;
         padding: 0;
+        margin-top: 12em;
         width: 10vw;
         position: absolute;
         // bottom: calc(-100% - 89%);
         right: 0;
         z-index: 10;
+
+        a:hover {
+            color: $first_color;
+        }
     }
 }
 
 //main
+.main_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("images/main-page.png");
+    background-color: $second_color;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30em;
+
+    h1 {
+        color: white;
+        font-size: 4em;
+        padding: 0.5em;
+        margin-bottom: 1em;
+        margin-top: 0;
+    }
+}
+
+.main_buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50em;
+    padding: 2em;
+
+    button {
+        // padding: 0.7em;
+        width: 13em;
+        height: 4em;
+        background-color: #1eafed;
+        color: whitesmoke;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+}
+
+.home {
+    &__intro {
+        display: flex;
+
+        &--card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 3em;
+
+            .icon {
+                font-size: 5em;
+            }
+        }
+    }
+
+    &__contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 5em;
+        background-color: $second_color;
+    }
+
+    &__about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 5em;
+    }
+}
 
 //footer
 .footer {
-    background-color: #1eafed;
+    background-color: $second_color;
+    // background-color: $second_color;
     display: flex;
     flex-direction: column;
 
@@ -60,8 +138,9 @@ $main_color: #1eafed;
         justify-content: center;
 
         &--icon {
-            font-size: 30px;
-            padding: 10px;
+            font-size: 3em;
+            padding: 1em 1em 0 1em;
+            margin: 0;
         }
 
         &--fb:hover {
@@ -73,22 +152,22 @@ $main_color: #1eafed;
         }
 
         &--tw:hover {
-            // color: #00acee;
-            color: white;
+            color: #00acee;
+            // color: white;
         }
     }
 
     &__copyright {
         display: flex;
         justify-content: center;
+
+        p {
+            padding: 0;
+            margin: 1em;
+        }
     }
 }
 
-//
-//
-//
-//
-//tynda css
 .shadow {
     position: fixed;
     top: 0;
@@ -99,6 +178,12 @@ $main_color: #1eafed;
     opacity: 0;
 }
 
+//
+//
+//
+//
+//tynda css
+
 input {
     border-style: solid;
     border-color: black;
@@ -107,59 +192,6 @@ input {
 body {
     background-color: #f8fcfb;
 }
-
-// header {
-//     display: flex;
-//     justify-content: space-between;
-//     position: relative;
-//     top: 0;
-//     height: 12vh;
-//     background-color: #1eafed;
-//     opacity: 1;
-
-//     .menu-container {
-//         width: 200px;
-
-//         display: flex;
-//         align-items: center;
-//         justify-content: flex-end;
-
-//         column-gap: 30px;
-//         padding: 7.5px 30px;
-
-//         .menu {
-//             width: 2em;
-//         }
-
-//         ul {
-//             margin: 0;
-//             padding: 0;
-//             width: 20vw;
-
-//             position: absolute;
-//             bottom: calc(-100% - 89%);
-//             right: 0;
-//             z-index: 10;
-//             border-radius: 10px;
-
-//             // row-gap: 7.5px;
-
-//             button {
-//                 width: 85%;
-//                 background-color: #1eafed;
-//                 height: 32px;
-//             }
-
-//             li {
-//                 list-style: none;
-//                 display: flex;
-//                 justify-content: center;
-//                 padding: 7.5px 0;
-//                 background-color: rgb(149, 192, 168);
-//             }
-//         }
-//     }
-// }
 
 ul {
     padding: 0;
@@ -191,56 +223,6 @@ ul {
     z-index: 1;
     top: 16em;
     left: 51.25em;
-}
-
-.account {
-    width: 4em;
-}
-
-.logo {
-    width: 70px;
-    margin: 10px;
-}
-
-.main_page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("images/main-page.png");
-    // opacity: 0.5;
-    background-color: $main_color;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 27em;
-    // row-gap: 10px;
-
-    h1 {
-        color: rgb(8, 8, 7);
-        font-size: 4em;
-        padding: 20px;
-        margin-bottom: 1em;
-        margin-top: 0;
-    }
-}
-
-.main_buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 50em;
-    padding: 2em;
-
-    button {
-        padding: 0.7em;
-        width: 13em;
-        height: 4em;
-        background-color: #1eafed;
-        color: whitesmoke;
-        border-radius: 10px;
-        font-size: 18px;
-    }
 }
 
 .articles-container {

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Logo from "/images/logo.png";
+
 
 const ListOffer = ({ fetchData2, searchResults, loading }) => {
     const navigate = useNavigate();
@@ -8,7 +8,7 @@ const ListOffer = ({ fetchData2, searchResults, loading }) => {
         <div className="offer-list">
             <button onClick={fetchData2}>search</button>
             {loading ? (
-                <img src={Logo} />
+                <img src="" />
             ) : (
                 <>
                     {searchResults.map((item, i) => (

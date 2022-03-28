@@ -17,7 +17,7 @@ import Chat from "./components/Chat";
 //CSS + Logo + Font Awesome Icons
 import "/css/app.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+// import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const App = () => {
@@ -70,9 +70,9 @@ const App = () => {
                             element={<Login getUserInfo={getUserInfo} />} />}
 
                 </Routes>
-
+           
             </main>
-
+            
             <footer className="footer">
                 <div className="footer__icons">
                     <a className="footer__icons--fb footer__icons--icon" href="https://www.facebook.com/Trashare-103244095682812"><FontAwesomeIcon icon={faFacebook} /></a> 
@@ -80,7 +80,7 @@ const App = () => {
                     <a className="footer__icons--tw footer__icons--icon" href="https://twitter.com/trashare2022"><FontAwesomeIcon icon={faTwitter} /></a> 
                 </div>
                 <div className="footer__copyright ">
-                    <p>©2022 Trashare. Proudly created by Kristýna and Martin.</p>
+                    <p>©2022 trashare. Proudly created by Kristýna and Martin.</p>
                 </div>
             </footer>
         </BrowserRouter>

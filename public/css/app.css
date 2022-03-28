@@ -3,16 +3,7 @@
   justify-content: space-between;
   background-color: white;
   align-items: center;
-  padding: 0 50px;
-}
-.header a:hover {
-  background-color: #fb3958;
-}
-.header__offers {
-  display: flex;
-}
-.header__offers .icon {
-  margin: 0 5px 0 15px;
+  padding: 0.5em 4em;
 }
 .header__menu {
   display: flex;
@@ -20,23 +11,100 @@
 }
 .header__menu .icon {
   margin: 0 5px 0 15px;
-  font-size: 50px;
+  font-size: 1.5em;
+  margin: 0;
+  padding-left: 10px;
+}
+.header__menu .user {
+  margin: 0 5px 0 15px;
+  font-size: 4em;
   margin: 0;
   padding-left: 10px;
 }
 .header__hamburger {
+  background-color: white;
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
+  margin-top: 12em;
   width: 10vw;
   position: absolute;
   right: 0;
   z-index: 10;
 }
+.header__hamburger a:hover {
+  color: #1eafed;
+}
+
+.main_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("images/main-page.png");
+  background-color: #68c2e9;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30em;
+}
+.main_page h1 {
+  color: white;
+  font-size: 4em;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+.main_buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50em;
+  padding: 2em;
+}
+.main_buttons button {
+  width: 13em;
+  height: 4em;
+  background-color: #1eafed;
+  color: whitesmoke;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.home__intro {
+  display: flex;
+}
+.home__intro--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3em;
+}
+.home__intro--card .icon {
+  font-size: 5em;
+}
+.home__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5em;
+  background-color: #68c2e9;
+}
+.home__about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5em;
+}
 
 .footer {
-  background-color: #1eafed;
+  background-color: #68c2e9;
   display: flex;
   flex-direction: column;
 }
@@ -45,8 +113,9 @@
   justify-content: center;
 }
 .footer__icons--icon {
-  font-size: 30px;
-  padding: 10px;
+  font-size: 3em;
+  padding: 1em 1em 0 1em;
+  margin: 0;
 }
 .footer__icons--fb:hover {
   color: #3b5998;
@@ -55,11 +124,15 @@
   color: #fb3958;
 }
 .footer__icons--tw:hover {
-  color: white;
+  color: #00acee;
 }
 .footer__copyright {
   display: flex;
   justify-content: center;
+}
+.footer__copyright p {
+  padding: 0;
+  margin: 1em;
 }
 
 .shadow {
@@ -109,52 +182,6 @@ ul {
   z-index: 1;
   top: 16em;
   left: 51.25em;
-}
-
-.account {
-  width: 4em;
-}
-
-.logo {
-  width: 70px;
-  margin: 10px;
-}
-
-.main_page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url("images/main-page.png");
-  background-color: #1eafed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 27em;
-}
-.main_page h1 {
-  color: #080807;
-  font-size: 4em;
-  padding: 20px;
-  margin-bottom: 1em;
-  margin-top: 0;
-}
-
-.main_buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50em;
-  padding: 2em;
-}
-.main_buttons button {
-  padding: 0.7em;
-  width: 13em;
-  height: 4em;
-  background-color: #1eafed;
-  color: whitesmoke;
-  border-radius: 10px;
-  font-size: 18px;
 }
 
 .articles-container {

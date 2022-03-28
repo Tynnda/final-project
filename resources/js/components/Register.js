@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Register = ({ getUserInfo }) => {
     const [values, setValues] = useState({
@@ -11,6 +12,8 @@ const Register = ({ getUserInfo }) => {
         password: "",
         password_confirmation: "",
     });
+
+    const navigate = useNavigate();
 
     const [errors, setErrors] = useState([]);
 
@@ -38,6 +41,8 @@ const Register = ({ getUserInfo }) => {
                 console.log("Validation failed");
             }
         }
+
+        navigate("/");
     };
 
     return (

@@ -55,9 +55,12 @@ const Chat = () => {
         <>
             <div>
                 {messages.map((item, i) => (
-                    <p key={i}>
-                        {item.user_id} - {item.text} - {item.created_at}
-                    </p>
+                    <div key={i}>
+                        <h3>{item.user.first_name}</h3>
+                        <p>{item.text}</p>
+                        <br />
+                        <p> {item.created_at}</p>
+                    </div>
                 ))}
             </div>
             <form action="" method="post" onSubmit={handleSubmit}>

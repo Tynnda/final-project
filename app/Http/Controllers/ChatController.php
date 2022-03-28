@@ -37,7 +37,9 @@ class ChatController extends Controller
 
         //vytahnu si z databaze data daneho offer
         $offer = Offer::where("id",$offerId)->get()[0];
+        
 
+        
         $messages = null;
         if($userId == $offer->user_id){
             //ziskavani zprav, pokud jsem tvurcem inzeratu
@@ -56,6 +58,9 @@ class ChatController extends Controller
                 ->where("offer_id", $offerId)
                 //a ktere maji moje user_id (napsal jsem je ja)
                 ->where("user_id", $userId)
+                
+                //lub ktore naleza do wlasciciela oferty
+                ->orWhere("user_id", $offer->user_id)
                 ->get();
         }
 

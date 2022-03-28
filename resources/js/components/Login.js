@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useHistory, useNavigate } from "react-router-dom";
 
 export default function Login({ getUserInfo }) {
     const [values, setValues] = useState({
         email: "",
         password: "",
     });
+
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -24,6 +27,8 @@ export default function Login({ getUserInfo }) {
         const response = await axios.post("/login", values);
         getUserInfo();
         const response_data = response.data;
+
+        navigate("/");
     };
 
     const handleChange = (event) => {

@@ -4,6 +4,7 @@ import Logout from "./Logout";
 import Profile from "./Profile";
 import userImg from "/images/user.png";
 import downImg from "/images/down.png";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 const Menu = ({ openMenu, setOpenMenu, handleLogout }) => {
     // const handleLogout = () => {
@@ -37,8 +38,12 @@ const Menu = ({ openMenu, setOpenMenu, handleLogout }) => {
                     {/* <li>
                         <button onClick={handleLogout}>Logout</button>
                     </li> */}
-                    <li>Account</li>
-                    <li>Chat</li>
+                    <li>
+                        <Link to="/profile">Profile</Link>
+                    </li>
+                    <li>
+                        <Link to="/chat">messages</Link>
+                    </li>
                     <li>Settings</li>
                     <li>
                         <Logout />

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Register from "./components/Register";
 import "/css/app.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, Switch } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
@@ -16,6 +16,7 @@ import Offer from "./components/Offer";
 import Search from "./components/Search";
 import Chat from "./components/Chat";
 import logoImg from "/images/logo.png";
+import StarRating from "./components/StarRating";
 
 const App = () => {
     const [user, setUser] = useState(null);

@@ -98,6 +98,8 @@ const Offer = () => {
         event.preventDefault();
 
         const axios_response = await axios.post("/api/offer/store", values);
+
+        navigate("/profile");
     };
 
     const handleChange = (event) => {

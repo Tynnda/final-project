@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -16,6 +16,7 @@ import Chat from "./components/Chat";
 
 //CSS + Logo + Font Awesome Icons
 import "/css/app.css";
+// import Logo from 'images/logo.svg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -42,9 +43,15 @@ const App = () => {
     return (
         <BrowserRouter>
             <header className="header">
-                <Link to="/">
-                    <h2>trashare</h2>
-                </Link>
+                <div className="header__trashare">
+                    <Link to="/">
+                        <img src='images/logo.svg'/>
+                        {/* <img src={Logo}/> */}
+                    </Link>
+                    <Link to="/">
+                        <h2>trashare</h2>
+                    </Link>
+                </div>
 
                 <nav>
                     {user ? "" : <Link to="/register">Register</Link>}
@@ -99,29 +106,31 @@ const App = () => {
             </main>
             
             <footer className="footer">
-                <div className="footer__icons">
-                    <a
-                        className="footer__icons--fb footer__icons--icon"
-                        href="https://www.facebook.com/Trashare-103244095682812"
-                    >
-                        <FontAwesomeIcon icon={faFacebook} />
-                    </a>
-                    <a
-                        className="footer__icons--ig footer__icons--icon"
-                        href="https://www.instagram.com/trashare.official/"
-                    >
-                        <FontAwesomeIcon icon={faInstagram} />
-                    </a>
-                    <a
-                        className="footer__icons--tw footer__icons--icon"
-                        href="https://twitter.com/trashare2022"
-                    >
-                        <FontAwesomeIcon icon={faTwitter} />
-                    </a>
-                </div>
-                <div className="footer__copyright ">
-                    <p>©2022 trashare. Proudly created by Kristýna and Martin.</p>
-                </div>
+
+                    <div className="footer__copyright ">
+                        <p>©2022 All Rights Reserved, trashare®</p>
+                    </div>
+                    <div className="footer__icons">
+                        <a
+                            className="footer__icons--fb footer__icons--icon"
+                            href="https://www.facebook.com/Trashare-103244095682812"
+                        >
+                            <FontAwesomeIcon icon={faFacebook} />
+                        </a>
+                        <a
+                            className="footer__icons--ig footer__icons--icon"
+                            href="https://www.instagram.com/trashare.official/"
+                        >
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </a>
+                        <a
+                            className="footer__icons--tw footer__icons--icon"
+                            href="https://twitter.com/trashare2022"
+                        >
+                            <FontAwesomeIcon icon={faTwitter} />
+                        </a>
+                    </div>
+                
             </footer>
         </BrowserRouter>
     );

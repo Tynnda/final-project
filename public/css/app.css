@@ -5,21 +5,36 @@
   align-items: center;
   padding: 0.5em 4em;
 }
+.header__trashare {
+  display: flex;
+}
+.header__trashare img {
+  width: 3em;
+  padding: 0;
+  margin: 0;
+}
+.header__trashare h2 {
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
+}
 .header__menu {
   display: flex;
   align-items: center;
 }
 .header__menu .icon {
   margin: 0 5px 0 15px;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 0;
   padding-left: 10px;
+  color: #d1d1d1;
 }
 .header__menu .user {
   margin: 0 5px 0 15px;
-  font-size: 4em;
+  font-size: 3em;
   margin: 0;
   padding-left: 10px;
+  color: #d1d1d1;
 }
 .header__hamburger {
   background-color: white;
@@ -37,55 +52,73 @@
   color: #1eafed;
 }
 
-.main_page {
+.home__page {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-image: url("images/main-page.png");
-  background-color: #68c2e9;
+  background-color: #7ed8ff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 30em;
-}
-.main_page h1 {
   color: white;
-  font-size: 4em;
-  padding: 0.5em;
-  margin-bottom: 1em;
-  margin-top: 0;
 }
-
-.main_buttons {
+.home__page h1 {
+  font-size: 4em;
+  padding: 0.2em 0 0.5em;
+  margin: 0;
+  margin-bottom: 2.5em;
+}
+.home__page--buttons {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 50em;
+  width: 40em;
   padding: 2em;
 }
-.main_buttons button {
-  width: 13em;
-  height: 4em;
+.home__page--buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7em;
+  width: 6em;
+  height: 2em;
   background-color: #1eafed;
-  color: whitesmoke;
-  border-radius: 10px;
-  font-size: 18px;
+  border-radius: 8em;
+  font-size: 1.8em;
+  color: white;
 }
-
+.home__page--buttons button:hover {
+  background-color: #1c91d4;
+}
 .home__intro {
   display: flex;
+  margin: 0;
+  padding: 0.5em 4em;
 }
 .home__intro--card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 3em;
+  padding: 0;
+  margin: 1em 2.8em;
 }
 .home__intro--card .icon {
-  font-size: 5em;
+  font-size: 4em;
+  color: #d1d1d1;
+}
+.home__intro--card h3 {
+  padding: 0;
+  margin: 0.5em;
+}
+.home__intro--card p {
+  color: #b1b1b1ef;
+  padding: 0;
+  margin: 0;
 }
 .home__contact {
   display: flex;
@@ -93,7 +126,7 @@
   align-items: center;
   text-align: center;
   padding: 5em;
-  background-color: #68c2e9;
+  background-color: #7ed8ff;
 }
 .home__about {
   display: flex;
@@ -104,18 +137,22 @@
 }
 
 .footer {
-  background-color: #68c2e9;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border-top: 0.1rem solid #1eafed;
+  margin: 0 4em;
 }
 .footer__icons {
   display: flex;
   justify-content: center;
 }
 .footer__icons--icon {
-  font-size: 3em;
-  padding: 1em 1em 0 1em;
-  margin: 0;
+  font-size: 2em;
+  padding: 0;
+  margin: 0.7em 0 0.7em 1em;
 }
 .footer__icons--fb:hover {
   color: #3b5998;
@@ -132,7 +169,7 @@
 }
 .footer__copyright p {
   padding: 0;
-  margin: 1em;
+  margin: 0.7em 0;
 }
 
 .shadow {

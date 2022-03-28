@@ -1,8 +1,10 @@
 //Sass
 // $my_font: Arial;
 $first_color: #1eafed;
-$second_color: #68c2e9;
+$second_color: #7ed8ff;
 $third_color: white;
+$fourth_color: #d1d1d1;
+$fifth_color: #b1b1b1ef;
 
 //header
 .header {
@@ -12,22 +14,41 @@ $third_color: white;
     align-items: center;
     padding: 0.5em 4em;
 
+    &__trashare {
+        display: flex;
+        // align-items: center;
+
+        img {
+            width: 3em;
+            padding: 0;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 2em;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
     &__menu {
         display: flex;
         align-items: center;
 
         .icon {
             margin: 0 5px 0 15px;
-            font-size: 1.5em;
+            font-size: 1.2em;
             margin: 0;
             padding-left: 10px;
+            color: $fourth_color;
         }
 
         .user {
             margin: 0 5px 0 15px;
-            font-size: 4em;
+            font-size: 3em;
             margin: 0;
             padding-left: 10px;
+            color: $fourth_color;
         }
     }
 
@@ -51,59 +72,81 @@ $third_color: white;
 }
 
 //main
-.main_page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-image: url("images/main-page.png");
-    background-color: $second_color;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 30em;
-
-    h1 {
-        color: white;
-        font-size: 4em;
-        padding: 0.5em;
-        margin-bottom: 1em;
-        margin-top: 0;
-    }
-}
-
-.main_buttons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 50em;
-    padding: 2em;
-
-    button {
-        // padding: 0.7em;
-        width: 13em;
-        height: 4em;
-        background-color: #1eafed;
-        color: whitesmoke;
-        border-radius: 10px;
-        font-size: 18px;
-    }
-}
-
 .home {
+    &__page {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url("images/main-page.png");
+        background-color: $second_color;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 30em;
+        color: $third_color;
+
+        h1 {
+            font-size: 4em;
+            padding: 0.2em 0 0.5em;
+            margin: 0;
+            margin-bottom: 2.5em;
+        }
+
+        &--buttons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 40em;
+            padding: 2em;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.7em;
+                width: 6em;
+                height: 2em;
+                background-color: $first_color;
+                border-radius: 8em;
+                font-size: 1.8em;
+                color: $third_color;
+            }
+
+            button:hover {
+                background-color: #1c91d4;
+            }
+        }
+    }
+
     &__intro {
         display: flex;
+        margin: 0;
+        padding: 0.5em 4em;
 
         &--card {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             text-align: center;
-            padding: 3em;
+            padding: 0;
+            margin: 1em 2.8em;
 
             .icon {
-                font-size: 5em;
+                font-size: 4em;
+                color: $fourth_color;
+            }
+
+            h3 {
+                padding: 0;
+                margin: 0.5em;
+            }
+
+            p {
+                color: $fifth_color;
+                padding: 0;
+                margin: 0;
             }
         }
     }
@@ -128,19 +171,23 @@ $third_color: white;
 
 //footer
 .footer {
-    background-color: $second_color;
-    // background-color: $second_color;
+    // background-color: $first_color;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    border-top: 0.1rem solid $first_color;
+    margin: 0 4em;
 
     &__icons {
         display: flex;
         justify-content: center;
 
         &--icon {
-            font-size: 3em;
-            padding: 1em 1em 0 1em;
-            margin: 0;
+            font-size: 2em;
+            padding: 0;
+            margin: 0.7em 0 0.7em 1em;
         }
 
         &--fb:hover {
@@ -153,7 +200,6 @@ $third_color: white;
 
         &--tw:hover {
             color: #00acee;
-            // color: white;
         }
     }
 
@@ -163,7 +209,7 @@ $third_color: white;
 
         p {
             padding: 0;
-            margin: 1em;
+            margin: 0.7em 0;
         }
     }
 }

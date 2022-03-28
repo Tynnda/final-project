@@ -185,12 +185,12 @@ const Menu = ({ openMenu, setOpenMenu, handleLogout }) => {
                     <div className="header__hamburger">
                         <div>
                             <FontAwesomeIcon icon={faUser} />
-                            <Link to="/profile"><a >Profile</a></Link> 
+                            <Link to="/my_profile"><a >Profile</a></Link> 
                         </div>
 
                         <div>
                             <FontAwesomeIcon icon={faGear} />
-                            <Link to="/profile"><a >Settings</a></Link> 
+                            <Link to="/my_profile"><a >Settings</a></Link> 
                         </div>
 
                         <div>

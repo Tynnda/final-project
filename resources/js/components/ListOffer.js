@@ -16,7 +16,11 @@ const ListOffer = ({ fetchData2, searchResults, loading }) => {
                             <div className="offer-part1">
                                 <div className="offer-name-image">
                                     <img src="images/user.png" />
-                                    <h3>
+                                    <h3
+                                        onClick={() =>
+                                            navigate("/profile/" + item.user.id)
+                                        }
+                                    >
                                         {item.user.first_name}{" "}
                                         {item.user.last_name}
                                     </h3>

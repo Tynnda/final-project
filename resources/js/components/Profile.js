@@ -2,10 +2,14 @@ import React, { Fragment } from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ListOffer from "./ListOffer";
+import { useNavigate } from "react-router-dom";
+import StarRating from "./StarRating";
 
 const Profile = () => {
     const [user, setUser] = useState({});
     const [searchResults, setSearchResults] = useState([]);
+
+    const navigate = useNavigate();
 
     const fetchData = async () => {
         const { data } = await axios.get("/api/user");
@@ -30,13 +34,13 @@ const Profile = () => {
                     <h2>
                         {user.first_name} {user.last_name}
                     </h2>
+                    <StarRating />
                 </div>
                 <div>
                     <img src="images/user.png" />
                 </div>
             </div>
             <div className="offer-list">
-                {/* <button onClick={fetchData2}>search</button> */}
                 {searchResults.map((item, i) => (
                     <div className="offer-container" key={i}>
                         <div className="offer-part1">
@@ -63,7 +67,11 @@ const Profile = () => {
                         </div>
                         <div className="offer-button-price">
                             <h4>price: {item.price}</h4>
-                            <button>send a message</button>
+                            <button
+                                onClick={() => navigate("/chat/" + item.id)}
+                            >
+                                chat
+                            </button>
                         </div>
                     </div>
                 ))}

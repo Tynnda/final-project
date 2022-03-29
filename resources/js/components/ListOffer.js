@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from '/images/loading.svg';
 
 //CSS + Logo + Font Awesome Icons
+import "/css/listOffer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserCircle, faPlaneDeparture, faPlaneArrival } from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle, faCalendarDay, faPlaneDeparture, faPlaneArrival } from "@fortawesome/free-solid-svg-icons";
 // import { faTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const ListOffer = ({ searchResults, loading }) => {
@@ -13,58 +14,51 @@ const ListOffer = ({ searchResults, loading }) => {
         <div className="search__offers">
             
             {loading ? (
-                <img src={Logo} />
+                <div className="loading"><img  src={Logo} /></div>
             ) : (
-                <div className="search__offers__card" >
+                
+                <Fragment>
                     {searchResults.map((item, i) => (
                         <div className="search__offers__card" key={i}>
 
-
-
-                            <div className="offer-part1">
-                                <div className="offer-name-image">
-                                    
-                                    <FontAwesomeIcon onClick={() =>
-                                            navigate("/profile/" + item.user.id)
-                                        } className='user' icon={faUserCircle} />
-                                    <h3
-                                        onClick={() =>
-                                            navigate("/profile/" + item.user.id)
-                                        }
-                                    >
-                                        {item.user.first_name}{" "}
-                                        {item.user.last_name}
-                                    </h3>
+                            <div className="search__offers__card__left">
+                                <div className="row user">
+                                    <FontAwesomeIcon className="icon" onClick={() => navigate("/profile/" + item.user.id)} icon={faUserCircle} />
+                                    <p onClick={() => navigate("/profile/" + item.user.id)}>
+                                        {item.user.first_name} 
+                                    </p>
                                 </div>
-                                <div className="offer-details">
-                                    <h4>{item.departure_time}</h4>
-                                    <h4>
-                                        from: {item.departure.country.name}{" "}
-                                        {"->"} {item.departure.name}{" "}
-                                    </h4>
-                                    <h4>
-                                        to: {item.arrival.country.name} {"->"}{" "}
-                                        {item.arrival.name}{" "}
-                                    </h4>
+
+                                <div className="row">
+                                    <FontAwesomeIcon className="icon" icon={faCalendarDay} />
+                                    <p>{item.departure_time}</p>
+                                </div > <br/>
+
+                                <div className="row">
+                                    <FontAwesomeIcon className="icon" icon={faPlaneDeparture} />
+                                    <p>{item.departure.country.name} {item.departure.name}</p>
                                 </div>
-                            </div>
-                            <div className="offer-text">
-                                <p>{item.text}</p>
-                            </div>
-                            <div className="offer-button-price">
-                                <h4>price: {item.price}</h4>
-                                <button
-                                    onClick={() => navigate("/chat/" + item.id)}
-                                >
-                                    send a message
-                                </button>
+
+                                <div className="row">
+                                    <FontAwesomeIcon className="icon" icon={faPlaneArrival} />
+                                    <p>{item.arrival.country.name} {item.arrival.name}</p>
+                                </div>
+
                             </div>
 
+                            <div className="search__offers__card__right">
+                                <div className="text"><p >{item.text}</p></div>
+                                <div className="row">
+                                    <p><strong>Price:</strong> {item.price}</p>
+                                    <button onClick={() => navigate("/chat/" + item.id)}>Message</button>
+                                </div>
+                            </div>
 
 
                         </div>
                     ))}
-                </div>
+                
+                </Fragment>
             )}
         </div>
     );

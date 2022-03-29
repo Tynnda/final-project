@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useNavigate } from "react-router-dom";
+import "/css/login.css";
 
 export default function Login({ getUserInfo }) {
     const [values, setValues] = useState({

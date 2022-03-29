@@ -1,0 +1,101 @@
+//Sass
+$my_font: "Nunito", sans-serif;
+$first_color: #1eafed;
+$second_color: #7ed8ff;
+$third_color: white;
+$fourth_color: #d1d1d1;
+$fifth_color: #b1b1b1ef;
+
+//ListOffer
+.search__offers {
+    // background-color: $second_color;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__card {
+        display: flex;
+        margin: 1em;
+        width: auto;
+        border-radius: 0.5em;
+        background-color: $fourth_color;
+        box-shadow: 2px 2px 2px 2px $fourth_color;
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            width: 15em;
+            border-right: 1.5px solid $fifth_color;
+
+            .user {
+                // justify-content: center;
+
+                .icon {
+                    font-size: 2.5em;
+                    margin: 0.3em 0.2em;
+                    padding: 0;
+                    color: $third_color;
+                }
+
+                .icon:hover {
+                    color: $second_color;
+                }
+
+                p {
+                    font-size: 1.2em;
+                    font-weight: 700;
+                    padding: 0;
+                }
+            }
+            .icon {
+                font-size: 1.2em;
+                padding: 0 0.5em;
+                color: $fifth_color;
+            }
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 20em;
+
+            .row {
+                justify-content: space-between;
+                border-top: 1.5px solid $fifth_color;
+                margin: 0;
+                padding: 0;
+
+                button {
+                    margin-top: 0.5em;
+                    background-color: $second_color;
+                    color: $third_color;
+                    border-radius: 1.5em;
+                    padding: 0.7em 1em;
+                    border-style: solid;
+                    font-weight: bold;
+                    font-size: 1em;
+                }
+                button:hover {
+                    background-color: $first_color;
+                }
+            }
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            padding: 0 0.5em 0.5em;
+            margin: 0;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            width: 20em;
+            height: 20em;
+            padding: 1em;
+            background-color: $third_color;
+        }
+    }
+}

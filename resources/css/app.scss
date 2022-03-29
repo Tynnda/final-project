@@ -16,6 +16,14 @@ body {
     background-color: white;
 }
 
+.loading {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 //header ******************************************
 .header {
     display: flex;
@@ -63,10 +71,8 @@ body {
         align-items: center;
 
         .icon {
-            margin: 0 5px 0 15px;
+            margin: 0 0.3em;
             font-size: 1.2em;
-            margin: 0;
-            padding-left: 10px;
             color: $fourth_color;
         }
 
@@ -76,6 +82,16 @@ body {
             margin: 0;
             padding-left: 10px;
             color: $fourth_color;
+        }
+
+        .user-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-left: 4em;
+        }
+
+        .text {
+            padding-right: 2em;
         }
     }
 
@@ -214,13 +230,24 @@ main {
         align-items: center;
         background-color: $first_color;
         padding: 1em;
-        margin: 2em 8em 1em;
-        border-radius: 3rem;
+        margin: 2em 4em;
+        border-radius: 3em;
+
+        .icon {
+            font-size: 1.5em;
+            padding-right: 0.5em;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         button {
             background-color: $second_color;
             color: $third_color;
-            border-radius: 1.5rem;
+            border-radius: 1.5em;
             padding: 0.7em 1em;
             border-style: solid;
             font-weight: bold;
@@ -233,24 +260,9 @@ main {
 
         input {
             text-align: center;
-            border-radius: 0.5rem;
-            padding: 0.7em 1rem;
+            border-radius: 0.5em;
+            padding: 0.7em 1em;
             margin: 0.5em;
-        }
-    }
-
-    //ListOffer
-    &__offers {
-        background-color: #fb3958;
-        display: flex;
-
-        &__card {
-            display: flex;
-            background-color: #7ed8ff;
-            margin: 1em;
-            padding: 1em;
-            width: 25em;
-            height: 25em;
         }
     }
 }
@@ -264,7 +276,7 @@ main {
     padding: 0;
     margin: 0;
     border-top: 0.1rem solid $first_color;
-    margin: 0 4em;
+    margin: 3em 4em 0;
 
     &__icons {
         display: flex;

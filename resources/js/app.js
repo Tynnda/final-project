@@ -16,7 +16,7 @@ import Chat from "./components/Chat";
 
 //CSS + Logo + Font Awesome Icons
 import "/css/app.css";
-// import Logo from 'images/logo.svg';
+import Logo from '/images/logo.svg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -45,8 +45,7 @@ const App = () => {
             <header className="header">
                 <div className="header__trashare">
                     <Link to="/">
-                        <img src='images/logo.svg'/>
-                        {/* <img src={Logo}/> */}
+                        <img src={Logo}/>
                     </Link>
                     <Link to="/">
                         <h2>trashare</h2>

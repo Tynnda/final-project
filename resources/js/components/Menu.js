@@ -36,24 +36,24 @@ const Menu = ({ openMenu, setOpenMenu, handleLogout }) => {
     useEffect(() => {
         fetchData();
     }, []);
-
+ 
     return (
         <div className="header__menu">
             <Link to="/search">
                 <FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />
             </Link>
             <Link to="/search">
-                <a>Search</a>
+                <a className="text">Search</a>
             </Link>
             <Link to="/offer">
                 <FontAwesomeIcon className="icon" icon={faPlusCircle} />
             </Link>
             <Link to="/offer">
-                <a>Post</a>
+                <a className="text">Post</a>
             </Link>
 
             <Link to="/my_profile">
-                <a>{user.first_name}</a>
+                <a className="user-name">{user.first_name}</a>
             </Link>
             <Link to="/my_profile">
                 <FontAwesomeIcon className="user" icon={faUserCircle} />

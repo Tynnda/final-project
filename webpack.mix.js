@@ -46,3 +46,6 @@ mix
 mix.js("resources/js/index.js", "public/js").react();
 
 mix.sass("resources/css/app.scss", "public/css");
+mix.sass("resources/css/login.scss", "public/css");
+mix.sass("resources/css/listOffer.scss", "public/css");
+mix.sass("resources/css/chat.scss", "public/css");

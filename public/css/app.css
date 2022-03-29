@@ -8,6 +8,14 @@ body {
   background-color: white;
 }
 
+.loading {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -47,10 +55,8 @@ body {
   align-items: center;
 }
 .header__menu .icon {
-  margin: 0 5px 0 15px;
+  margin: 0 0.3em;
   font-size: 1.2em;
-  margin: 0;
-  padding-left: 10px;
   color: #d1d1d1;
 }
 .header__menu .user {
@@ -59,6 +65,14 @@ body {
   margin: 0;
   padding-left: 10px;
   color: #d1d1d1;
+}
+.header__menu .user-name {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-left: 4em;
+}
+.header__menu .text {
+  padding-right: 2em;
 }
 .header__hamburger {
   background-color: white;
@@ -176,13 +190,22 @@ main {
   align-items: center;
   background-color: #1eafed;
   padding: 1em;
-  margin: 2em 8em 1em;
-  border-radius: 3rem;
+  margin: 2em 4em;
+  border-radius: 3em;
+}
+.search__bar .icon {
+  font-size: 1.5em;
+  padding-right: 0.5em;
+}
+.search__bar div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .search__bar button {
   background-color: #7ed8ff;
   color: white;
-  border-radius: 1.5rem;
+  border-radius: 1.5em;
   padding: 0.7em 1em;
   border-style: solid;
   font-weight: bold;
@@ -193,21 +216,9 @@ main {
 }
 .search__bar input {
   text-align: center;
-  border-radius: 0.5rem;
-  padding: 0.7em 1rem;
+  border-radius: 0.5em;
+  padding: 0.7em 1em;
   margin: 0.5em;
-}
-.search__offers {
-  background-color: #fb3958;
-  display: flex;
-}
-.search__offers__card {
-  display: flex;
-  background-color: #7ed8ff;
-  margin: 1em;
-  padding: 1em;
-  width: 25em;
-  height: 25em;
 }
 
 .footer {
@@ -217,7 +228,7 @@ main {
   padding: 0;
   margin: 0;
   border-top: 0.1rem solid #1eafed;
-  margin: 0 4em;
+  margin: 3em 4em 0;
 }
 .footer__icons {
   display: flex;

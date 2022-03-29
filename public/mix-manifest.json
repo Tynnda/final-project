@@ -1,7 +1,10 @@
 {
-    "/js/index.js": "/js/index.js?id=d97ad1f8103825ee7e78ba5ddd7ff57d",
+    "/js/index.js": "/js/index.js?id=b92f4441999977cddd127e75b5b31306",
+    "/css/login.css": "/css/login.css?id=68b329da9893e34099c7d8ad5cb9c940",
     "/css/register.css": "/css/register.css?id=4179335dd420020d5c11d186b7834af4",
     "/css/offer-list-countries-cities.css": "/css/offer-list-countries-cities.css?id=b64065a33ce605f3c4d9637e976915a1",
     "/css/offer.css": "/css/offer.css?id=b650d670cb54dea262c95458c20779b6",
-    "/css/app.css": "/css/app.css?id=42d42cb99a215abf1e20f67ef7b22486"
+    "/css/app.css": "/css/app.css?id=92d3378f4fe3988198b43e74f04881f5",
+    "/css/chat.css": "/css/chat.css?id=a2e990a903ea2775fb40bb25277fbbd8",
+    "/css/listOffer.css": "/css/listOffer.css?id=e2438b8b6cb4aab286ce8f23dca354ba"
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import "/css/chat.css";
 
 const Chat = () => {
     const params = useParams();
@@ -52,8 +53,8 @@ const Chat = () => {
 
     console.log(messages);
     return (
-        <>
-            <div>
+        <main className="chat">
+            <div className="chat__conversation">
                 {messages.map((item, i) => (
                     <div key={i}>
                         <h3>{item.user.first_name}</h3>
@@ -63,19 +64,20 @@ const Chat = () => {
                     </div>
                 ))}
             </div>
-            <form action="" method="post" onSubmit={handleSubmit}>
-                <textarea
+            <form className="chat__form" action="" method="post" onSubmit={handleSubmit}>
+                
+                <input
                     type="text"
                     name="text"
-                    rows="20"
+                    
                     value={values.text}
                     placeholder="your message..."
                     onChange={handleChange}
                 />
-                <br />
+                
                 <input type="submit" value="submit" />
             </form>
-        </>
+        </main>
     );
 };
 

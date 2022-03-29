@@ -107,7 +107,7 @@ const Search = () => {
             <div className="search__bar">
 
                 <div>
-                    <FontAwesomeIcon icon={faPlaneDeparture} />
+                    <FontAwesomeIcon className="icon" icon={faPlaneDeparture} />
                     <input
                         onFocus={() => {
                             setOpenListFrom(true), setOpenListTo(false);
@@ -121,7 +121,7 @@ const Search = () => {
                 </div>
 
                 <div>
-                    <FontAwesomeIcon icon={faPlaneArrival} />
+                    <FontAwesomeIcon className="icon" icon={faPlaneArrival} />
                     <input
                         onFocus={() => {
                             setOpenListTo(true), setOpenListFrom(false);

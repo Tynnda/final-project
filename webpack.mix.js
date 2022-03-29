@@ -49,3 +49,6 @@ mix.sass("resources/css/app.scss", "public/css");
 mix.sass("resources/css/offer.scss", "public/css");
 mix.sass("resources/css/offer-list-countries-cities.scss", "public/css");
 mix.sass("resources/css/register.scss", "public/css");
+mix.sass("resources/css/login.scss", "public/css");
+mix.sass("resources/css/listOffer.scss", "public/css");
+mix.sass("resources/css/chat.scss", "public/css");

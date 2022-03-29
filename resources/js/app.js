@@ -63,7 +63,7 @@ const App = () => {
                     ""
                 )}
             </header>
-            <main>
+           
                 {openMenu && (
                     <div
                         className="shadow"
@@ -102,8 +102,6 @@ const App = () => {
                         />
                     )}
                 </Routes>
-           
-            </main>
             
             <footer className="footer">
 

@@ -37,7 +37,9 @@ Route::post("/saveMessage", 'App\Http\Controllers\ChatController@saveMessage');
 // sizes
 Route::get("/sizes", 'App\Http\Controllers\SizesController@showSizes');
 
+// reviews
 Route::get("/reviews/{user_id}", 'App\Http\Controllers\ReviewController@getReviewsById');
+Route::post("/reviews/{user_id}", 'App\Http\Controllers\ReviewController@postReviewsById');
 
 
 

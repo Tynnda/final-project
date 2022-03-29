@@ -8,12 +8,13 @@ const Profile = () => {
     const [user, setUser] = useState({});
     const [searchResults, setSearchResults] = useState([]);
 
+    const [reviews, setReviews] = useState([]);
+
     const navigate = useNavigate();
 
     const params = useParams();
 
     const fetchData2 = async () => {
-        console.log(params.profile_id);
         if (params.profile_id) {
             const response = await axios.get(
                 "/api/profile/" + params.profile_id
@@ -22,8 +23,6 @@ const Profile = () => {
                 setSearchResults(response.data);
                 setUser(response.data[0].user);
             }
-
-            console.log(response.data);
         } else {
             const response = await axios.get("/api/my_profile");
 
@@ -31,16 +30,46 @@ const Profile = () => {
                 setUser(response.data[0].user);
                 setSearchResults(response.data);
             }
-
-            console.log(response.data);
         }
+    };
+
+    const [avg_value, setAvg_value] = useState(0);
+
+    const handleSubmitRating = async (number) => {
+        const response = await axios.post("/api/reviews/" + params.profile_id, {
+            rating_value: number,
+        });
+
+        const data = await response.data;
+        const rate = await data.map((element) => element.rating_value);
+
+        const countRate = await rate.reduce((a, b) => a + b, 0);
+        const avg = countRate / rate.length;
+        setAvg_value(avg.toFixed(1));
     };
 
     useEffect(() => {
         fetchData2();
     }, [params.profile_id]);
 
-    const [avg_value, setAvg_value] = useState(0);
+    // count rating star
+
+    const fetchReviews = async () => {
+        const response = await axios.get("/api/reviews/" + params.profile_id);
+
+        const data = await response.data;
+        const rate = await data.map((element) => element.rating_value);
+
+        const countRate = await rate.reduce((a, b) => a + b, 0);
+        const avg = countRate / rate.length || 0;
+        setAvg_value(avg.toFixed(1));
+    };
+
+    useEffect(() => {
+        if (params.profile_id !== undefined) {
+            fetchReviews();
+        }
+    }, [params.profile_id]);
 
     if (user && searchResults.length) {
         return (
@@ -50,7 +79,10 @@ const Profile = () => {
                         <h2>
                             {user.first_name || "N/A"} {user.last_name || "N/A"}
                         </h2>
-                        <StarRating avg_value={avg_value} />
+                        <StarRating
+                            avg_value={avg_value}
+                            handleSubmit={handleSubmitRating}
+                        />
                     </div>
                     <div>
                         <img src="images/user.png" />

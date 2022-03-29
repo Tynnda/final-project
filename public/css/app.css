@@ -256,29 +256,4 @@ main {
   opacity: 0;
 }
 
-.list_from_input {
-  display: flex;
-}
-
-.countries {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 30em;
-  height: 30em;
-  background-color: #d2ffe6;
-  position: absolute;
-  z-index: 1;
-  top: 16em;
-}
-
-.cities {
-  background-color: #96ddb6;
-  width: 15em;
-  position: absolute;
-  z-index: 1;
-  top: 16em;
-  left: 51.25em;
-}
-
 /*# sourceMappingURL=app.css.map*/

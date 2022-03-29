@@ -1,0 +1,202 @@
+//Sass
+$my_font: "Nunito", sans-serif;
+$first_color: #1eafed;
+$second_color: #7ed8ff;
+$third_color: white;
+$fourth_color: #d1d1d1;
+$fifth_color: #b1b1b1ef;
+
+.offer-form-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: $third_color;
+    padding: 0;
+    border-top: 0.1rem solid $first_color;
+    margin: 0 4em;
+
+    .offer-form {
+        background-color: $third_color;
+        width: 40em;
+        border-radius: 3px;
+        box-shadow: 10px 7px 10px 7px rgb(102, 99, 99);
+        margin: 5em;
+
+        .form-heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40em;
+
+            h1 {
+                font-size: 2em;
+                font-weight: 300;
+                padding: 40px;
+            }
+        }
+
+        h4 {
+            margin: 30px;
+            font-weight: normal;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            align-items: center;
+
+            input[type="text"] {
+                border: 1.5px solid rgb(102, 99, 99);
+                border-radius: 2px;
+                width: 13em;
+                height: 3em;
+                border-radius: 0.5em;
+                margin-right: 10px;
+            }
+
+            input[type="date"] {
+                border: 1.5px solid rgb(102, 99, 99);
+                border-radius: 2px;
+                width: 13em;
+                height: 2.9em;
+                border-radius: 0.5em;
+            }
+        }
+
+        .form-images-container {
+            display: flex;
+            justify-content: space-around;
+            width: 25em;
+
+            .form-images {
+                width: 4em;
+                display: flex;
+                background-color: $third_color;
+                opacity: 1;
+                padding: 10px;
+                border-radius: 5px;
+                opacity: 0.8;
+                border: 1.5px solid rgb(129, 127, 127);
+            }
+
+            .form-images2 {
+                width: 4em;
+                display: flex;
+                background-color: $second_color;
+                opacity: 1;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1.5px solid rgb(129, 127, 127);
+            }
+
+            .form-images3 {
+                width: 4em;
+                display: flex;
+                background-color: $second_color;
+                opacity: 1;
+                padding: 10px;
+                border-radius: 5px;
+                opacity: 0.8;
+                border: 1.5px solid rgb(129, 127, 127);
+            }
+
+            .form-images4 {
+                width: 4em;
+                display: flex;
+                background-color: $third_color;
+                opacity: 1;
+                padding: 10px;
+                border-radius: 5px;
+                opacity: 0.8;
+                border: 1.5px solid rgb(129, 127, 127);
+            }
+
+            .form-images5 {
+                width: 4em;
+                display: flex;
+                background-color: $second_color;
+                opacity: 1;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1.5px solid rgb(129, 127, 127);
+                opacity: 0.8;
+            }
+
+            .form-images6 {
+                width: 4em;
+                display: flex;
+                background-color: $third_color;
+                opacity: 1;
+                padding: 10px;
+                border-radius: 5px;
+                opacity: 0.8;
+                border: 1.5px solid rgb(129, 127, 127);
+            }
+
+            .form-images7 {
+                width: 4em;
+                display: flex;
+                background-color: $second_color;
+                opacity: 1;
+                padding: 10px;
+                border-radius: 5px;
+                opacity: 0.8;
+                border: 1.5px solid rgb(129, 127, 127);
+            }
+
+            .form-images8 {
+                width: 4em;
+                display: flex;
+                background-color: $third_color;
+                opacity: 1;
+                padding: 10px;
+                border-radius: 5px;
+                opacity: 0.8;
+                border: 1.5px solid rgb(129, 127, 127);
+            }
+        }
+
+        .form-part2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .textarea-price {
+                h4 {
+                    margin-top: 2em;
+                    margin-left: 0;
+                    margin-bottom: 5px;
+                }
+
+                textarea {
+                    width: 30em;
+                    border-radius: 2px;
+                    border: 1.5px solid rgb(102, 99, 99);
+                    margin-top: 0;
+                }
+
+                input[type="text"] {
+                    border: 1.5px solid rgb(102, 99, 99);
+                    border-radius: 2px;
+                    width: 13em;
+                    height: 3em;
+                    border-radius: 0.5em;
+                    margin-right: 10px;
+                }
+            }
+
+            button {
+                width: 7em;
+                height: 2.5em;
+                margin-bottom: 2em;
+                background-color: $first_color;
+                color: $third_color;
+                border-radius: 0.5em;
+            }
+        }
+    }
+}

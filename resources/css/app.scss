@@ -326,32 +326,11 @@ main {
 //     list-style: none;
 // }
 
-.list_from_input {
-    display: flex;
-}
+// .list_from_input {
+//     display: flex;
+// }
 
 // list of countries and cities from searchbar and offer
-
-.countries {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 30em;
-    height: 30em;
-    background-color: rgb(210, 255, 230);
-    position: absolute;
-    z-index: 1;
-    top: 16em;
-}
-
-.cities {
-    background-color: rgb(150, 221, 182);
-    width: 15em;
-    position: absolute;
-    z-index: 1;
-    top: 16em;
-    left: 51.25em;
-}
 
 // .articles-container {
 //     display: flex;
@@ -374,64 +353,6 @@ main {
 
 //     img {
 //         width: 4em;
-//     }
-// }
-
-// .offer-form-div {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     padding: 20px;
-//     background-color: white;
-// }
-
-// .offer-form {
-//     background-color: rgb(233, 227, 227);
-//     width: 40em;
-//     border-radius: 3px;
-// }
-
-// .form-heading {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 40em;
-// }
-
-// .input-container {
-//     display: flex;
-//     justify-content: center;
-//     flex-direction: column;
-//     align-items: center;
-//     // width: 50em;
-//     padding: 1em;
-// }
-
-// input {
-//     width: 13em;
-//     height: 3em;
-//     border-radius: 2px;
-//     margin: 1em;
-// }
-
-// .form-part2 {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-
-//     textarea {
-//         width: 30em;
-//         border-radius: 2px;
-//     }
-
-//     button {
-//         width: 7em;
-//         height: 2.5em;
-//         margin-bottom: 2em;
-//         background-color: rgb(16, 112, 67);
-//         color: white;
 //     }
 // }
 
@@ -500,90 +421,3 @@ main {
 // }
 
 // // form images toggle onclick
-
-// .form-images-container {
-//     display: flex;
-//     justify-content: space-around;
-//     width: 25em;
-// }
-
-// .form-images {
-//     width: 4em;
-//     display: flex;
-//     background-color: white;
-//     opacity: 1;
-//     padding: 10px;
-//     border-radius: 5px;
-//     opacity: 0.8;
-// }
-
-// .form-images2 {
-//     width: 4em;
-//     display: flex;
-//     background-color: rgb(191, 199, 245);
-//     opacity: 1;
-//     padding: 10px;
-//     border-radius: 5px;
-// }
-
-// .form-images3 {
-//     width: 4em;
-//     display: flex;
-//     background-color: rgb(191, 199, 245);
-//     opacity: 1;
-//     padding: 10px;
-//     border-radius: 5px;
-//     opacity: 0.8;
-// }
-
-// .form-images4 {
-//     width: 4em;
-//     display: flex;
-//     background-color: white;
-//     opacity: 1;
-//     padding: 10px;
-//     border-radius: 5px;
-//     opacity: 0.8;
-// }
-
-// .form-images5 {
-//     width: 4em;
-//     display: flex;
-//     background-color: rgb(191, 199, 245);
-//     opacity: 1;
-//     padding: 10px;
-//     border-radius: 5px;
-
-//     opacity: 0.8;
-// }
-
-// .form-images6 {
-//     width: 4em;
-//     display: flex;
-//     background-color: white;
-//     opacity: 1;
-//     padding: 10px;
-//     border-radius: 5px;
-//     opacity: 0.8;
-// }
-
-// .form-images7 {
-//     width: 4em;
-//     display: flex;
-//     background-color: rgb(191, 199, 245);
-//     opacity: 1;
-//     padding: 10px;
-//     border-radius: 5px;
-//     border-style: solid;
-//     opacity: 0.8;
-// }
-
-// .form-images8 {
-//     width: 4em;
-//     display: flex;
-//     background-color: white;
-//     opacity: 1;
-//     padding: 10px;
-//     border-radius: 5px;
-//     opacity: 0.8;
-// }

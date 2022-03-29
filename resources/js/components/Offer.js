@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "/css/offer.css";
+import "/css/offer-list-countries-cities.css";
 
 const Offer = () => {
     const [countries, setCountries] = useState([]);
@@ -155,28 +157,6 @@ const Offer = () => {
                         </div>
                         <h4>How much space do you offer?</h4>
                         <div className="form-images-container">
-                            {/* {sizes.map((element, i) => (
-                                <div key={i}>
-                                    <input
-                                        className="hidden-input"
-                                        type="text"
-                                        name="size"
-                                        value={values.size}
-                                        onChange={handleChange}
-                                    />
-                                    <img
-                                        className={
-                                            isActive
-                                                ? "form-images2"
-                                                : "form-images"
-                                        }
-                                        onClick={toggleClass}
-                                        src={element.value}
-                                        alt="icon"
-                                    />
-                                </div>
-                            ))} */}
-
                             <img
                                 src="images/pocket.png"
                                 className={
@@ -208,76 +188,87 @@ const Offer = () => {
                         </div>
 
                         {openListFrom && (
-                            <ul name="from" className="countries">
+                            <div name="from" className="countries">
                                 {countries.map((element, i) => (
-                                    <li
+                                    <div
                                         key={element.id}
                                         onClick={() => handleClickFrom(element)}
+                                        className="countries-name"
                                     >
-                                        {element.name}
-                                    </li>
+                                        <p>{element.name}</p>
+                                    </div>
                                 ))}
-                            </ul>
+                            </div>
                         )}
 
                         {!!cities.length && openListFrom && (
-                            <ul className="cities">
+                            <div className="cities">
                                 {cities.map((element) => (
-                                    <li
-                                        key={element.id}
-                                        onClick={() => citiesClickFrom(element)}
-                                    >
-                                        {element.name}
-                                    </li>
+                                    <div className="cities-name">
+                                        <p
+                                            key={element.id}
+                                            onClick={() =>
+                                                citiesClickFrom(element)
+                                            }
+                                        >
+                                            {element.name}
+                                        </p>
+                                    </div>
                                 ))}
-                            </ul>
+                            </div>
                         )}
 
                         {openListTo && (
-                            <ul name="to" className="countries">
+                            <div name="to" className="countries">
                                 {countries.map((element, i) => (
-                                    <li
+                                    <div
                                         key={element.id}
-                                        onClick={() => handleClickTo(element)}
+                                        onClick={() => handleClickFrom(element)}
+                                        className="countries-name"
                                     >
-                                        {element.name}
-                                    </li>
+                                        <p>{element.name}</p>
+                                    </div>
                                 ))}
-                            </ul>
+                            </div>
                         )}
 
                         {!!cities.length && openListTo && (
-                            <ul className="cities">
+                            <div className="cities">
                                 {cities.map((element) => (
-                                    <li
+                                    <p
                                         key={element.id}
                                         onClick={() => citiesClickTo(element)}
                                     >
                                         {element.name}
-                                    </li>
+                                    </p>
                                 ))}
-                            </ul>
+                            </div>
                         )}
                     </div>
 
                     <div className="form-part2">
-                        <textarea
-                            type="text"
-                            rows="20"
-                            name="text"
-                            value={values.text}
-                            onChange={handleChange}
-                            placeholder="your advertisement"
-                        ></textarea>
-                        <br />
-
-                        <input
-                            type="text"
-                            name="price"
-                            placeholder="price"
-                            value={values.price}
-                            onChange={handleChange}
-                        />
+                        <div className="textarea-price">
+                            <h4>Describe your advertisement...</h4>
+                            <textarea
+                                type="text"
+                                rows="20"
+                                name="text"
+                                value={values.text}
+                                onChange={handleChange}
+                                placeholder="your advertisement"
+                            ></textarea>
+                            <br />
+                            <h4>
+                                Set price for your offer... money?.. chocolate?
+                            </h4>
+                            <input
+                                type="text"
+                                name="price"
+                                placeholder="price"
+                                value={values.price}
+                                onChange={handleChange}
+                            />
+                        </div>
                         <br />
                         <button>save</button>
                     </div>

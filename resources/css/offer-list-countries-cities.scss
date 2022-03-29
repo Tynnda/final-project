@@ -1,0 +1,53 @@
+//Sass
+$my_font: "Nunito", sans-serif;
+$first_color: #1eafed;
+$second_color: #7ed8ff;
+$third_color: white;
+$fourth_color: #d1d1d1;
+$fifth_color: #b1b1b1ef;
+
+.countries {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-around;
+    background-color: white;
+    width: 51.1em;
+    height: 19.2em;
+    position: absolute;
+    z-index: 1;
+    top: 20em;
+    left: 4em;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 4px 2px 4px rgb(182, 180, 180);
+
+    .countries-name {
+        width: 7.3em;
+        height: 3.2em;
+        display: flex;
+        padding: 20px;
+
+        align-items: center;
+        margin: 0;
+    }
+
+    .countries-name:hover {
+        background-color: $second_color;
+        border-radius: 7px;
+    }
+}
+
+.cities {
+    background-color: rgb(240, 243, 255);
+    width: 15em;
+    position: absolute;
+    z-index: 1;
+    top: 20em;
+    border-radius: 5px 5px 5px 5px;
+    left: 55em;
+    box-shadow: 2px 4px 2px 4px rgb(182, 180, 180);
+
+    p:hover {
+        background-color: $second_color;
+        border-radius: 7px;
+    }
+}

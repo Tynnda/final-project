@@ -41,26 +41,28 @@ export default function Login({ getUserInfo }) {
     };
 
     return (
-        <form action="/" method="post" onSubmit={handleSubmit}>
-            <label>Email</label>
-            <br />
-            <input
-                type="email"
-                name="email"
-                value={values.email}
-                onChange={handleChange}
-            />
-            <label>Password</label>
-            <br />
-            <input
-                type="password"
-                name="password"
-                value={values.password}
-                onChange={handleChange}
-            />
-            <br />
+        <main>
+            <form action="/" method="post" onSubmit={handleSubmit}>
+                <label>Email</label>
+                <br />
+                <input
+                    type="email"
+                    name="email"
+                    value={values.email}
+                    onChange={handleChange}
+                />
+                <label>Password</label>
+                <br />
+                <input
+                    type="password"
+                    name="password"
+                    value={values.password}
+                    onChange={handleChange}
+                />
+                <br />
 
-            <button>Login</button>
-        </form>
+                <button>Login</button>
+            </form>
+        </main>
     );
 }

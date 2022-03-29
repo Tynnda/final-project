@@ -1,21 +1,32 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Logo from '/images/loading.svg';
 
+//CSS + Logo + Font Awesome Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserCircle, faPlaneDeparture, faPlaneArrival } from "@fortawesome/free-solid-svg-icons";
+// import { faTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-const ListOffer = ({ fetchData2, searchResults, loading }) => {
+const ListOffer = ({ searchResults, loading }) => {
     const navigate = useNavigate();
     return (
-        <div className="offer-list">
-            <button onClick={fetchData2}>search</button>
+        <div className="search__offers">
+            
             {loading ? (
-                <img src="" />
+                <img src={Logo} />
             ) : (
-                <>
+                <div className="search__offers__card" >
                     {searchResults.map((item, i) => (
-                        <div className="offer-container" key={i}>
+                        <div className="search__offers__card" key={i}>
+
+
+
                             <div className="offer-part1">
                                 <div className="offer-name-image">
-                                    <img src="images/user.png" />
+                                    
+                                    <FontAwesomeIcon onClick={() =>
+                                            navigate("/profile/" + item.user.id)
+                                        } className='user' icon={faUserCircle} />
                                     <h3
                                         onClick={() =>
                                             navigate("/profile/" + item.user.id)
@@ -48,9 +59,12 @@ const ListOffer = ({ fetchData2, searchResults, loading }) => {
                                     send a message
                                 </button>
                             </div>
+
+
+
                         </div>
                     ))}
-                </>
+                </div>
             )}
         </div>
     );

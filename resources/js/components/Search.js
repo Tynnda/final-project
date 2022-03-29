@@ -4,6 +4,11 @@ import axios from "axios";
 import SearchResult from "./SearchResult";
 import ListOffer from "./ListOffer";
 
+//Font Awesome Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlaneDeparture, faPlaneArrival } from "@fortawesome/free-solid-svg-icons";
+// import {  } from "@fortawesome/free-brands-svg-icons";
+
 const Search = () => {
     const [countries, setCountries] = useState([]);
     const [searchResults, setSearchResults] = useState([]);
@@ -98,43 +103,54 @@ const Search = () => {
     };
 
     return (
-        <>
-            <div className="search-inputs">
-                <input
-                    onFocus={() => {
-                        setOpenListFrom(true), setOpenListTo(false);
-                    }}
-                    type="text"
-                    name="departure_id"
-                    onChange={handleChange}
-                    value={values.from.name}
-                    placeholder="from"
-                />
+        <main className="search">
+            <div className="search__bar">
 
-                <input
-                    onFocus={() => {
-                        setOpenListTo(true), setOpenListFrom(false);
-                    }}
-                    type="text"
-                    name="arrival_id"
-                    onChange={handleChange}
-                    value={values.to.name}
-                    placeholder="to"
-                />
+                <div>
+                    <FontAwesomeIcon icon={faPlaneDeparture} />
+                    <input
+                        onFocus={() => {
+                            setOpenListFrom(true), setOpenListTo(false);
+                        }}
+                        type="text"
+                        name="departure_id"
+                        onChange={handleChange}
+                        value={values.from.name}
+                        placeholder="Departure"
+                    />
+                </div>
 
-                <input
-                    type="date"
-                    name="dateFrom"
-                    value={values.dateFrom}
-                    onChange={handleChange}
-                />
+                <div>
+                    <FontAwesomeIcon icon={faPlaneArrival} />
+                    <input
+                        onFocus={() => {
+                            setOpenListTo(true), setOpenListFrom(false);
+                        }}
+                        type="text"
+                        name="arrival_id"
+                        onChange={handleChange}
+                        value={values.to.name}
+                        placeholder="Arrival"
+                    />
+                </div>
 
-                <input
-                    type="date"
-                    name="dateTo"
-                    value={values.dateTo}
-                    onChange={handleChange}
-                />
+                <div>
+                    <input
+                        type="date"
+                        name="dateFrom"
+                        value={values.dateFrom}
+                        onChange={handleChange}
+                    />
+    
+                    <input
+                        type="date"
+                        name="dateTo"
+                        value={values.dateTo}
+                        onChange={handleChange}
+                    />
+                </div>
+
+                <button onClick={fetchData2}>Search</button>
             </div>
 
             <ListOffer
@@ -198,7 +214,7 @@ const Search = () => {
                     </ul>
                 )}
             </div>
-        </>
+        </main>
     );
 };
 

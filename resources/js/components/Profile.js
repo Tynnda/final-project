@@ -4,6 +4,15 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import StarRating from "./StarRating";
 
+import Loading from '/images/loading.svg';
+import Logo from '/images/logo.svg';
+
+//CSS + Logo + Font Awesome Icons
+import "/css/listOffer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserCircle, faCalendarDay, faPlaneDeparture, faPlaneArrival, faMoneyBillWave } from "@fortawesome/free-solid-svg-icons";
+// import {  } from "@fortawesome/free-brands-svg-icons";
+
 const Profile = () => {
     const [user, setUser] = useState({});
     const [searchResults, setSearchResults] = useState([]);
@@ -88,47 +97,70 @@ const Profile = () => {
                         <img src="images/user.png" />
                     </div>
                 </div>
-                <div className="offer-list">
+
+                <div className="search__offers">
+                
+                <Fragment>
                     {searchResults.map((item, i) => (
-                        <div className="offer-container" key={i}>
-                            <div className="offer-part1">
-                                <div className="offer-name-image">
-                                    <img src="images/user.png" />
-                                    <h3>
-                                        {item.user.first_name || "N/A"}{" "}
-                                        {item.user.last_name || "N/A"}
-                                    </h3>
+                        <div className="search__offers__card" key={i}>
+
+                            <div className="search__offers__card__left">
+                                <div>
+                                    <div className="row user">
+                                        <FontAwesomeIcon className="icon" onClick={() => navigate("/profile/" + item.user.id)} icon={faUserCircle} />
+                                        <p onClick={() => navigate("/profile/" + item.user.id)}>
+                                            {item.user.first_name} 
+                                        </p>
+                                    </div>
+    
+                                    <div className="row">
+                                        <FontAwesomeIcon className="icon" icon={faCalendarDay} />
+                                        <p>{item.departure_time}</p>
+                                    </div > <br/>
+    
+                                    <div className="row">
+                                        <FontAwesomeIcon className="icon" icon={faPlaneDeparture} />
+                                        <p>{item.departure.country.name} {item.departure.name}</p>
+                                    </div>
+    
+                                    <div className="row">
+                                        <FontAwesomeIcon className="icon" icon={faPlaneArrival} />
+                                        <p>{item.arrival.country.name} {item.arrival.name}</p>
+                                    </div>
                                 </div>
-                                <div className="offer-details">
-                                    <h4>{item.departure_time}</h4>
-                                    <h4>
-                                        from: {item.departure.country.name}{" "}
-                                        {"->"} {item.departure.name}{" "}
-                                    </h4>
-                                    <h4>
-                                        to: {item.arrival.country.name} {"->"}{" "}
-                                        {item.arrival.name}{" "}
-                                    </h4>
+                                
+                                <div className="trashare">
+                                    <img src={Logo}/>
+                                    <h2>trashare</h2>
+                                </div>
+
+                                
+                            </div>
+
+                            <div className="search__offers__card__right">
+                                <div className="text"><p >{item.text}</p></div>
+                                <div className="row">
+                                    <div className="money">
+                                        <FontAwesomeIcon className="icon" icon={faMoneyBillWave} /> 
+                                        <p> <strong>{item.price}</strong></p>
+                                    </div>
+
+                                    <button onClick={() => navigate("/chat/" + item.id)}>Message</button>
                                 </div>
                             </div>
-                            <div className="offer-text">
-                                <p>{item.text}</p>
-                            </div>
-                            <div className="offer-button-price">
-                                <h4>price: {item.price}</h4>
-                                <button
-                                    onClick={() => navigate("/chat/" + item.id)}
-                                >
-                                    chat
-                                </button>
-                            </div>
+
+
                         </div>
                     ))}
-                </div>
+                
+                </Fragment>
+            
+        </div>
+
             </>
         );
     } else {
-        return <div>loading...</div>;
+        return <div className="loading"><img  src={Loading} /></div>;
     }
 };
 

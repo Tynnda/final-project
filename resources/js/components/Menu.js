@@ -68,28 +68,28 @@ const Menu = ({ openMenu, setOpenMenu, handleLogout }) => {
             {openMenu && (
                 <div className="header__hamburger">
                     <div>
-                        <FontAwesomeIcon icon={faUser} />
+                        <FontAwesomeIcon className="icon" icon={faUser} />
                         <Link to="/my_profile">
                             <a>Profile</a>
                         </Link>
                     </div>
 
                     <div>
-                        <FontAwesomeIcon icon={faGear} />
+                        <FontAwesomeIcon className="icon" icon={faGear} />
                         <Link to="/my_profile">
                             <a>Settings</a>
                         </Link>
                     </div>
 
                     <div>
-                        <FontAwesomeIcon icon={faComment} />
+                        <FontAwesomeIcon className="icon" icon={faComment} />
                         <Link to="/chat">
                             <a>Chat</a>
                         </Link>
                     </div>
 
                     <div>
-                        <FontAwesomeIcon icon={faRightFromBracket} />
+                        <FontAwesomeIcon className="icon" icon={faRightFromBracket} />
                         <Logout />
                     </div>
                 </div>

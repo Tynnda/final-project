@@ -6,7 +6,7 @@ const Logout = () => {
         await axios.post("/logout").then(() => (location.href = "/"));
     };
 
-    return <a onClick={handleLogout}>Logout</a>;
+    return <a onClick={handleLogout}><strong>Logout</strong></a>; 
 };
 
 export default Logout;

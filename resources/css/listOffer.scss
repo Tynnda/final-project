@@ -16,20 +16,18 @@ $fifth_color: #b1b1b1ef;
     &__card {
         display: flex;
         margin: 1em;
-        width: auto;
-        border-radius: 0.5em;
+        border-radius: 1em;
         background-color: $fourth_color;
         box-shadow: 2px 2px 2px 2px $fourth_color;
 
         &__left {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             width: 15em;
             border-right: 1.5px solid $fifth_color;
 
             .user {
-                // justify-content: center;
-
                 .icon {
                     font-size: 2.5em;
                     margin: 0.3em 0.2em;
@@ -38,7 +36,7 @@ $fifth_color: #b1b1b1ef;
                 }
 
                 .icon:hover {
-                    color: $second_color;
+                    color: $first_color;
                 }
 
                 p {
@@ -47,6 +45,27 @@ $fifth_color: #b1b1b1ef;
                     padding: 0;
                 }
             }
+
+            .trashare {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 0.5em;
+
+                img {
+                    color: $first_color;
+                    width: 1.9em;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                h2 {
+                    font-size: 2.1em;
+                    padding-left: 0.1em;
+                    color: $first_color;
+                    text-shadow: 1px 1px $fifth_color;
+                }
+            }
+
             .icon {
                 font-size: 1.2em;
                 padding: 0 0.5em;
@@ -61,10 +80,23 @@ $fifth_color: #b1b1b1ef;
             width: 20em;
 
             .row {
+                align-items: center;
                 justify-content: space-between;
                 border-top: 1.5px solid $fifth_color;
                 margin: 0;
                 padding: 0;
+
+                .money {
+                    display: flex;
+                    align-items: center;
+
+                    .icon {
+                        font-size: 1.6em;
+                        padding: 0 0.3em;
+
+                        color: $fifth_color;
+                    }
+                }
 
                 button {
                     margin-top: 0.5em;
@@ -93,7 +125,7 @@ $fifth_color: #b1b1b1ef;
             display: flex;
             flex-direction: column;
             width: 20em;
-            height: 20em;
+            height: 15em;
             padding: 1em;
             background-color: $third_color;
         }

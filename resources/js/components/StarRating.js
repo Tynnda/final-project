@@ -86,7 +86,7 @@ function PrettyRating({
     onChange,
 }) {
     // short trick
-    const stars = Array.from({ length: count }, () => "🟊");
+    const stars = Array.from({ length: count }, () => "★");
 
     // Internal handle change function
     const handleChange = (value) => {

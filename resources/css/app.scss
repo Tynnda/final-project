@@ -50,19 +50,20 @@ body {
 
     &__trashare {
         display: flex;
+        align-items: center;
         padding: 0;
         margin: 0;
 
         img {
-            width: 3em;
+            width: 1.9em;
             padding: 0;
             margin: 0;
         }
 
         h2 {
-            font-size: 2em;
-            padding: 0;
-            margin: 0;
+            font-size: 2.1em;
+            padding-left: 0.1em;
+            margin-bottom: 0.1em;
         }
     }
 
@@ -99,17 +100,28 @@ body {
         background-color: $third_color;
         display: flex;
         flex-direction: column;
-        margin: 0;
-        padding: 0;
-        margin-top: 12em;
+        margin: 12em 4em 0 0;
+        padding: 0.5em;
+        border-radius: 1em 0;
         width: 10vw;
         position: absolute;
-        // bottom: calc(-100% - 89%);
+        // border: $first_color solid;
+        box-shadow: 0.1px 0.1px 1px 1px $fourth_color;
         right: 0;
         z-index: 10;
 
+        div {
+            display: flex;
+            align-items: center;
+            padding: 0.1em;
+        }
+
         a:hover {
             color: $first_color;
+        }
+
+        .icon {
+            padding: 0.1em;
         }
     }
 }

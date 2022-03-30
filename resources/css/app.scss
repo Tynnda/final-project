@@ -19,6 +19,17 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+}
+
+input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
 .loading {
     width: 100%;
     height: 80vh;
@@ -35,7 +46,10 @@ body {
     align-items: center;
     padding: 0.5em 4em;
     margin: 0;
+    position: sticky;
+    top: 0;
 
+    z-index: 10;
     nav {
         a {
             color: $first_color;
@@ -73,11 +87,13 @@ body {
     &__menu {
         display: flex;
         align-items: center;
+        z-index: 11;
 
         .icon {
             margin: 0 0.3em;
             font-size: 1.2em;
             color: $fourth_color;
+            cursor: pointer;
         }
 
         .user {
@@ -111,7 +127,7 @@ body {
         // border: $first_color solid;
         box-shadow: 0.1px 0.1px 1px 1px $fourth_color;
         right: 0;
-        z-index: 10;
+        z-index: 12;
 
         div {
             display: flex;

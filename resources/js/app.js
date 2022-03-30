@@ -16,7 +16,7 @@ import Chat from "./components/Chat";
 
 //CSS + Logo + Font Awesome Icons
 import "/css/app.css";
-import Logo from '/images/logo.svg';
+import Logo from "/images/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faUser } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -49,7 +49,7 @@ const App = () => {
             <header className="header">
                 <div className="header__trashare">
                     <Link to="/">
-                        <img src={Logo}/>
+                        <img src={Logo} />
                     </Link>
                     <Link to="/">
                         <h2>trashare</h2>
@@ -66,13 +66,6 @@ const App = () => {
                     ""
                 )}
             </header>
-
-            {openMenu && (
-                <div
-                    className="shadow"
-                    onClick={() => setOpenMenu(false)}
-                ></div>
-            )}
 
             <Routes>
                 <Route exact path="/" element={<Home />} />
@@ -105,6 +98,13 @@ const App = () => {
                     />
                 )}
             </Routes>
+
+            {openMenu && (
+                <div
+                    className="shadow"
+                    onClick={() => setOpenMenu(false)}
+                ></div>
+            )}
 
             <footer className="footer">
                 <div className="footer__copyright ">

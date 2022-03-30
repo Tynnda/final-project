@@ -9,12 +9,12 @@ $fifth_color: #b1b1b1ef;
 .countries-search {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-around;
+
     background-color: white;
     width: 51.1em;
     height: 19.2em;
     position: absolute;
-    z-index: 1;
+    z-index: 12;
     top: 11.8em;
     left: 4em;
     border-radius: 5px 5px 5px 5px;
@@ -41,7 +41,7 @@ $fifth_color: #b1b1b1ef;
     width: 15em;
     position: absolute;
     z-index: 12;
-    top: 20em;
+    top: 11.8em;
     border-radius: 5px 5px 5px 5px;
     left: 55em;
     box-shadow: 2px 4px 2px 4px rgb(182, 180, 180);

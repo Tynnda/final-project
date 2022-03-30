@@ -42,7 +42,7 @@ export default function Login({ getUserInfo }) {
     };
 
     return (
-        <main>
+        <main className="main-login">
             <form action="/" method="post" onSubmit={handleSubmit}>
                 <label>Email</label>
                 <br />

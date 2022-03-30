@@ -1,1 +1,13 @@
+//Sass
+$my_font: "Nunito", sans-serif;
+$first_color: #1eafed;
+$second_color: #7ed8ff;
+$third_color: white;
+$fourth_color: #d1d1d1;
+$fifth_color: #b1b1b1ef;
 
+.main-login {
+    padding: 0;
+    border-top: 0.1rem solid $first_color;
+    margin: 0 4em;
+}

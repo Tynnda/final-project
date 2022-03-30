@@ -180,18 +180,19 @@ main {
 .home__intro--card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   text-align: center;
   padding: 0;
-  margin: 1em 2.8em;
+  margin: 2.5em 2.8em;
+  width: 20em;
 }
 .home__intro--card .icon {
   font-size: 4em;
   color: #d1d1d1;
+  margin: 0;
 }
 .home__intro--card h3 {
-  padding: 0;
+  padding: 15px;
   margin: 0.5em;
 }
 .home__intro--card p {

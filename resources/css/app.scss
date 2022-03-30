@@ -212,19 +212,21 @@ main {
         &--card {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            // justify-content: space-between;
             align-items: center;
             text-align: center;
             padding: 0;
-            margin: 1em 2.8em;
+            margin: 2.5em 2.8em;
+            width: 20em;
 
             .icon {
                 font-size: 4em;
                 color: $fourth_color;
+                margin: 0;
             }
 
             h3 {
-                padding: 0;
+                padding: 15px;
                 margin: 0.5em;
             }
 

@@ -6,7 +6,7 @@ $third_color: white;
 $fourth_color: #d1d1d1;
 $fifth_color: #b1b1b1ef;
 
-.countries {
+.countries-search {
     display: flex;
     flex-wrap: wrap;
     // justify-content: space-around;
@@ -14,8 +14,8 @@ $fifth_color: #b1b1b1ef;
     width: 51.1em;
     height: 19.2em;
     position: absolute;
-    z-index: 12;
-    top: 20em;
+    z-index: 1;
+    top: 11.8em;
     left: 4em;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 2px 4px 2px 4px rgb(182, 180, 180);
@@ -36,7 +36,7 @@ $fifth_color: #b1b1b1ef;
     }
 }
 
-.cities {
+.cities-search {
     background-color: rgb(240, 243, 255);
     width: 15em;
     position: absolute;

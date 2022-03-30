@@ -92,10 +92,6 @@ const Offer = () => {
         setOpenListTo(false);
     };
 
-    // const sizeClick = (element) => {
-    //     setSizes({ ...values, size: element });
-    // };
-
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -135,6 +131,7 @@ const Offer = () => {
                                 onChange={handleChange}
                                 value={values.from.name}
                                 placeholder="from"
+                                autoComplete="off"
                             />
 
                             <input
@@ -146,6 +143,7 @@ const Offer = () => {
                                 onChange={handleChange}
                                 value={values.to.name}
                                 placeholder="to"
+                                autoComplete="off"
                             />
 
                             <input
@@ -153,6 +151,7 @@ const Offer = () => {
                                 name="date"
                                 value={values.date}
                                 onChange={handleChange}
+                                autoComplete="off"
                             />
                         </div>
                         <h4>How much space do you offer?</h4>
@@ -273,6 +272,15 @@ const Offer = () => {
                         <button>save</button>
                     </div>
                 </form>
+
+                {(openListFrom || openListTo) && (
+                    <div
+                        className="shadow"
+                        onClick={() => {
+                            setOpenListFrom(false), setOpenListTo(false);
+                        }}
+                    ></div>
+                )}
             </div>
         </>
     );

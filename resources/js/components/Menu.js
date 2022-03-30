@@ -36,7 +36,7 @@ const Menu = ({ openMenu, setOpenMenu, handleLogout }) => {
     useEffect(() => {
         fetchData();
     }, []);
- 
+
     return (
         <div className="header__menu">
             <Link to="/search">
@@ -64,6 +64,12 @@ const Menu = ({ openMenu, setOpenMenu, handleLogout }) => {
                 icon={faAngleDown}
                 onClick={() => setOpenMenu(!openMenu)}
             />
+            {openMenu && (
+                <div
+                    className="shadow"
+                    onClick={() => setOpenMenu(false)}
+                ></div>
+            )}
 
             {openMenu && (
                 <div className="header__hamburger">
@@ -89,7 +95,10 @@ const Menu = ({ openMenu, setOpenMenu, handleLogout }) => {
                     </div>
 
                     <div>
-                        <FontAwesomeIcon className="icon" icon={faRightFromBracket} />
+                        <FontAwesomeIcon
+                            className="icon"
+                            icon={faRightFromBracket}
+                        />
                         <Logout />
                     </div>
                 </div>

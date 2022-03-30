@@ -11,17 +11,12 @@ import {
     faPlaneDeparture,
     faPlaneArrival,
 } from "@fortawesome/free-solid-svg-icons";
-// import {  } from "@fortawesome/free-brands-svg-icons";
 
 const Search = () => {
     const [countries, setCountries] = useState([]);
     const [searchResults, setSearchResults] = useState([]);
     const [cities, setCities] = useState([]);
-    // const [searchValue, setSearchValue] = useState({
-    //     from: "",
-    //     to: "",
-    //     date: "",
-    // });
+
     const [selectionFrom, setSelectionFrom] = useState({
         country: {},
         city: {},
@@ -120,6 +115,7 @@ const Search = () => {
                         onChange={handleChange}
                         value={values.from.name}
                         placeholder="Departure"
+                        autoComplete="off"
                     />
                 </div>
 
@@ -134,6 +130,7 @@ const Search = () => {
                         onChange={handleChange}
                         value={values.to.name}
                         placeholder="Arrival"
+                        autoComplete="off"
                     />
                 </div>
 
@@ -162,7 +159,6 @@ const Search = () => {
                 loading={loading}
             />
 
-            {/* <div className="list_from_input"> */}
             {openListFrom && (
                 <div name="from" className="countries-search">
                     {countries.map((element, i) => (
@@ -180,45 +176,53 @@ const Search = () => {
             {!!cities.length && openListFrom && (
                 <div className="cities-search">
                     {cities.map((element) => (
-                        <div
-                            className="cities-name"
-                            key={element.id}
-                            onClick={() => citiesClickFrom(element)}
-                        >
-                            {element.name}
+                        <div className="cities-name">
+                            <p
+                                key={element.id}
+                                onClick={() => citiesClickFrom(element)}
+                            >
+                                {element.name}
+                            </p>
                         </div>
                     ))}
                 </div>
             )}
-            {/* </div> */}
 
-            <div className="list_from_input">
-                {openListTo && (
-                    <ul name="to" className="countries">
-                        {countries.map((element, i) => (
-                            <li
-                                key={element.id}
-                                onClick={() => handleClickTo(element)}
-                            >
-                                {element.name}
-                            </li>
-                        ))}
-                    </ul>
-                )}
+            {openListTo && (
+                <div name="to" className="countries-search">
+                    {countries.map((element, i) => (
+                        <div
+                            key={element.id}
+                            onClick={() => handleClickFrom(element)}
+                            className="countries-name"
+                        >
+                            <p>{element.name}</p>
+                        </div>
+                    ))}
+                </div>
+            )}
 
-                {!!cities.length && openListTo && (
-                    <ul className="cities">
-                        {cities.map((element) => (
-                            <li
-                                key={element.id}
-                                onClick={() => citiesClickTo(element)}
-                            >
-                                {element.name}
-                            </li>
-                        ))}
-                    </ul>
-                )}
-            </div>
+            {!!cities.length && openListTo && (
+                <div className="cities-search">
+                    {cities.map((element) => (
+                        <p
+                            key={element.id}
+                            onClick={() => citiesClickTo(element)}
+                        >
+                            {element.name}
+                        </p>
+                    ))}
+                </div>
+            )}
+
+            {(openListFrom || openListTo) && (
+                <div
+                    className="shadow"
+                    onClick={() => {
+                        setOpenListFrom(false), setOpenListTo(false);
+                    }}
+                ></div>
+            )}
         </main>
     );
 };

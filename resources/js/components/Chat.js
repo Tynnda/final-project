@@ -9,7 +9,7 @@ import "/css/chat.css";
 import Logo from '/images/logo.svg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser ,faFaceSmile, faCirclePlus, faImage, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-import { gif} from "@fortawesome/free-brands-svg-icons";
+// import { } from "@fortawesome/free-brands-svg-icons";
 
 const Chat = () => {
     const params = useParams();

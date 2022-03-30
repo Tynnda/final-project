@@ -53,3 +53,4 @@ mix.sass("resources/css/register.scss", "public/css");
 mix.sass("resources/css/login.scss", "public/css");
 mix.sass("resources/css/listOffer.scss", "public/css");
 mix.sass("resources/css/chat.scss", "public/css");
+mix.sass("resources/css/profile.scss", "public/css");

@@ -9,6 +9,7 @@ import Logo from '/images/logo.svg';
 
 //CSS + Logo + Font Awesome Icons
 import "/css/listOffer.css";
+import "/css/profile.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle, faCalendarDay, faPlaneDeparture, faPlaneArrival, faMoneyBillWave } from "@fortawesome/free-solid-svg-icons";
 // import {  } from "@fortawesome/free-brands-svg-icons";
@@ -83,19 +84,22 @@ const Profile = () => {
     if (user && searchResults.length) {
         return (
             <>
-                <div className="profile-container">
-                    <div>
-                        <h2>
-                            {user.first_name || "N/A"} {user.last_name || "N/A"}
-                        </h2>
-                        <StarRating
-                            avg_value={avg_value}
-                            handleSubmit={handleSubmitRating}
-                        />
-                    </div>
-                    <div>
-                        <img src="images/user.png" />
-                    </div>
+                <div className="profile__header">
+
+                        
+                        <div className="profile__header__user">
+                            <div className="profile__header__user--info">
+                                <p className="name">{user.first_name || "N/A"} {user.last_name || "N/A"}</p>
+                                <StarRating
+                                    avg_value={avg_value}
+                                    handleSubmit={handleSubmitRating}
+                                />
+                                <p className="contact"><strong>email:</strong>  {user.email}</p>
+                                <p className="contact"><strong>phone number:</strong> {user.phone_num}</p>
+                            </div>
+                            <FontAwesomeIcon className="profile__header__user--icon" icon={faUserCircle} />
+                        </div>
+                    
                 </div>
 
                 <div className="search__offers">

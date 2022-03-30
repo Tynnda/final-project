@@ -1,0 +1,55 @@
+//Sass
+$my_font: "Nunito", sans-serif;
+$first_color: #1eafed;
+$second_color: #7ed8ff;
+$third_color: white;
+$fourth_color: #d1d1d1;
+$fifth_color: #b1b1b1ef;
+
+.profile__header {
+    padding: 0;
+    border-top: 0.1rem solid $first_color;
+    border-bottom: 0.05rem solid $fifth_color;
+    margin: 0 4em 2em;
+    display: flex;
+    justify-content: center;
+
+    &__user {
+        display: flex;
+        justify-content: space-between;
+        width: 30em;
+        margin: 2em;
+
+        &--info {
+            .name {
+                font-size: 3em;
+                font-weight: bold;
+                margin: 0;
+                padding: 0;
+            }
+
+            .contact {
+                // font-weight: bolder;
+                font-size: 1.1em;
+                padding-bottom: 0.2em;
+            }
+
+            .rating {
+                margin-bottom: 2.2em;
+                display: flex;
+                align-items: center;
+
+                p {
+                    font-size: 1.5em;
+                    font-weight: bolder;
+                    margin: 0.55em 0 0 0.5em;
+                }
+            }
+        }
+
+        &--icon {
+            font-size: 6em;
+            color: $fourth_color;
+        }
+    }
+}

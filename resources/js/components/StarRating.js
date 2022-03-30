@@ -46,7 +46,7 @@ function PrettyRating({
     value = 0,
     inactiveColor = "#ddd",
     size = 24,
-    activeColor = "#f00",
+    activeColor = "#FFD93D",
     onChange,
 }) {
     // short trick
@@ -58,7 +58,7 @@ function PrettyRating({
     };
 
     return (
-        <div>
+        <div className="rating">
             {stars.map((s, index) => {
                 let style = inactiveColor;
                 if (index < value) {
@@ -80,7 +80,7 @@ function PrettyRating({
                     </span>
                 );
             })}
-            {value}
+            <p>{value}</p>
         </div>
     );
 }

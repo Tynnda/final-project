@@ -1,6 +1,7 @@
 //Sass
 $my_font: "Nunito", sans-serif;
 $first_color: #1eafed;
+
 $second_color: #7ed8ff;
 $third_color: white;
 $fourth_color: #d1d1d1;
@@ -14,6 +15,8 @@ $fifth_color: #b1b1b1ef;
 
 body {
     background-color: white;
+    position: relative;
+    box-sizing: border-box;
 }
 
 .loading {
@@ -130,6 +133,11 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    /* &::after {
+        content: "";
+        display: block;
+        height: 100px;
+    } */
 }
 //home ******
 .home {
@@ -289,6 +297,11 @@ main {
     margin: 0;
     border-top: 0.1rem solid $first_color;
     margin: 3em 4em 0;
+    /* position: absolute;
+    bottom: 0;
+    width: 100%; */
+
+    box-sizing: border-box;
 
     &__icons {
         display: flex;

@@ -6,6 +6,8 @@
 
 body {
   background-color: white;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .loading {
@@ -103,6 +105,11 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  /* &::after {
+      content: "";
+      display: block;
+      height: 100px;
+  } */
 }
 
 .home__page {
@@ -239,6 +246,10 @@ main {
   margin: 0;
   border-top: 0.1rem solid #1eafed;
   margin: 3em 4em 0;
+  /* position: absolute;
+  bottom: 0;
+  width: 100%; */
+  box-sizing: border-box;
 }
 .footer__icons {
   display: flex;

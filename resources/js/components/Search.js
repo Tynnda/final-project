@@ -3,10 +3,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import SearchResult from "./SearchResult";
 import ListOffer from "./ListOffer";
+import "/css/search-list-countries-cities.css";
 
 //Font Awesome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlaneDeparture, faPlaneArrival } from "@fortawesome/free-solid-svg-icons";
+import {
+    faPlaneDeparture,
+    faPlaneArrival,
+} from "@fortawesome/free-solid-svg-icons";
 // import {  } from "@fortawesome/free-brands-svg-icons";
 
 const Search = () => {
@@ -105,7 +109,6 @@ const Search = () => {
     return (
         <main className="search">
             <div className="search__bar">
-
                 <div>
                     <FontAwesomeIcon className="icon" icon={faPlaneDeparture} />
                     <input
@@ -141,7 +144,7 @@ const Search = () => {
                         value={values.dateFrom}
                         onChange={handleChange}
                     />
-    
+
                     <input
                         type="date"
                         name="dateTo"
@@ -159,33 +162,35 @@ const Search = () => {
                 loading={loading}
             />
 
-            <div className="list_from_input">
-                {openListFrom && (
-                    <ul name="from" className="countries">
-                        {countries.map((element, i) => (
-                            <li
-                                key={element.id}
-                                onClick={() => handleClickFrom(element)}
-                            >
-                                {element.name}
-                            </li>
-                        ))}
-                    </ul>
-                )}
+            {/* <div className="list_from_input"> */}
+            {openListFrom && (
+                <div name="from" className="countries-search">
+                    {countries.map((element, i) => (
+                        <div
+                            key={element.id}
+                            onClick={() => handleClickFrom(element)}
+                            className="countries-name"
+                        >
+                            <p>{element.name}</p>
+                        </div>
+                    ))}
+                </div>
+            )}
 
-                {!!cities.length && openListFrom && (
-                    <ul className="cities">
-                        {cities.map((element) => (
-                            <li
-                                key={element.id}
-                                onClick={() => citiesClickFrom(element)}
-                            >
-                                {element.name}
-                            </li>
-                        ))}
-                    </ul>
-                )}
-            </div>
+            {!!cities.length && openListFrom && (
+                <div className="cities-search">
+                    {cities.map((element) => (
+                        <div
+                            className="cities-name"
+                            key={element.id}
+                            onClick={() => citiesClickFrom(element)}
+                        >
+                            {element.name}
+                        </div>
+                    ))}
+                </div>
+            )}
+            {/* </div> */}
 
             <div className="list_from_input">
                 {openListTo && (

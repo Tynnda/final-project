@@ -22,7 +22,35 @@ $fifth_color: #b1b1b1ef;
         width: 30em;
 
         form {
-            width: 25em;
+            width: 10em;
+            border-style: solid;
+
+            input[type="name"] {
+                border: 1.5px solid rgb(102, 99, 99);
+                border-radius: 2px;
+                width: 13em;
+                height: 3em;
+                border-radius: 0.5em;
+                margin-right: 10px;
+            }
+
+            input[type="text"] {
+                border: 1.5px solid rgb(102, 99, 99);
+                border-radius: 2px;
+                width: 13em;
+                height: 3em;
+                border-radius: 0.5em;
+                margin-right: 10px;
+            }
+
+            input[type="number"] {
+                border: 1.5px solid rgb(102, 99, 99);
+                border-radius: 2px;
+                width: 13em;
+                height: 3em;
+                border-radius: 0.5em;
+                margin-right: 10px;
+            }
         }
     }
 }

@@ -34,42 +34,6 @@ const StarRating = ({ avg_value = 0, handleSubmit }) => {
                     name="rating_value"
                     onChange={(e) => handleSubmit(e)}
                 />
-                {/* <div>
-                    <input
-                        type="button"
-                        value={1}
-                        name="rating_value"
-                        onClick={() => handleSubmit(1)}
-                    />
-                    <input
-                        type="button"
-                        value={2}
-                        name="rating_value"
-                        onClick={() => handleSubmit(2)}
-                    />
-                    <input
-                        type="button"
-                        value={3}
-                        name="rating_value"
-                        onClick={() => handleSubmit(3)}
-                    />
-                    <input
-                        type="button"
-                        value={4}
-                        name="rating_value"
-                        onClick={() => handleSubmit(4)}
-                    />
-                    <input
-                        type="button"
-                        value={5}
-                        name="rating_value"
-                        onClick={() => handleSubmit(5)}
-                    />
-                </div> */}
-                {/* <div>
-                    <img src="/images/star.png" alt="star" />
-                    <p>{avg_value}</p>
-                </div> */}
             </div>
         </div>
     );
@@ -120,27 +84,3 @@ function PrettyRating({
         </div>
     );
 }
-
-/* 
-function StarRatingDemo() {
-  // Get the rating from a db if required.
-  // The value 3 is just for testing.
-  const [rating, setRating] = useState(3);
-
-  const handleChange = (value) => {
-    setRating(value);
-  }
-  return (
-    <div>
-      <h2>Star Rating Demo</h2>
-
-     <StarRating 
-       count={5}
-       size={40}
-       value={rating}
-       activeColor ={'red'}
-       inactiveColor={'#ddd'}
-       onChange={handleChange}  />
-    </div>
-  )
-} */

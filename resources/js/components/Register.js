@@ -47,9 +47,9 @@ const Register = ({ getUserInfo }) => {
     };
 
     return (
-        <main className="register-main">
+        <main className="register__page">
             <fieldset>
-                <legend>Register</legend>
+                <legend>Sign up</legend>
                 <form action="" method="post" onSubmit={handleSubmit}>
                     {Object.values(errors).map((field_errors, i) =>
                         field_errors.map((error, j) => (
@@ -57,10 +57,9 @@ const Register = ({ getUserInfo }) => {
                                 {error}
                             </div>
                         ))
-                    )}
-                    <div>
+                    )} 
+                    <div className="type">
                         <label>First name</label>
-                        <br />
                         <input
                             type="name"
                             name="first_name"
@@ -68,9 +67,9 @@ const Register = ({ getUserInfo }) => {
                             onChange={handleChange}
                         />
                     </div>
-                    <div>
+
+                    <div className="type">
                         <label>Last name</label>
-                        <br />
                         <input
                             type="name"
                             name="last_name"
@@ -78,9 +77,9 @@ const Register = ({ getUserInfo }) => {
                             onChange={handleChange}
                         />
                     </div>
-                    <div>
+
+                    <div className="type">
                         <label>Email</label>
-                        <br />
                         <input
                             type="text"
                             name="email"
@@ -88,19 +87,19 @@ const Register = ({ getUserInfo }) => {
                             onChange={handleChange}
                         />
                     </div>
-                    <div>
+
+                    <div className="type">
                         <label>Phone number</label>
-                        <br />
                         <input
-                            type="number"
+                            type="text"
                             name="phone_num"
                             value={values.phone_num}
                             onChange={handleChange}
                         />
                     </div>
-                    <div>
+
+                    <div className="type">
                         <label>Password</label>
-                        <br />
                         <input
                             type="password"
                             name="password"
@@ -108,9 +107,10 @@ const Register = ({ getUserInfo }) => {
                             onChange={handleChange}
                         />
                     </div>
-                    <div>
+
+                    <div className="type">
                         <label>Verify password</label>
-                        <br />
+
                         <input
                             type="password"
                             name="password_confirmation"
@@ -118,13 +118,12 @@ const Register = ({ getUserInfo }) => {
                             onChange={handleChange}
                         />
                     </div>
-                    <div>
-                        <label>I agree with privacy policy</label>
-                        <input type="checkbox" name="checkbox" />
-                    </div>
-                    <div>
-                        <button>Register</button>
-                    </div>
+
+                    <p className="privacy">By signing up, you agree to <a>Privacy Policy</a></p>
+
+                        <button>Sign up</button>
+                    
+                    <p>Already have an account? <a href="/login">Log in</a></p>
                 </form>
             </fieldset>
         </main>

@@ -57,8 +57,8 @@ const App = () => {
                 </div>
 
                 <nav>
-                    {user ? "" : <Link to="/register">Register</Link>}
-                    {user ? "" : <Link to="/login">Login</Link>}
+                    {user ? "" : <Link to="/register">Sign up</Link>}
+                    {user ? "" : <Link to="/login">Log in</Link>}
                 </nav>
                 {user ? (
                     <Menu openMenu={openMenu} setOpenMenu={setOpenMenu} />

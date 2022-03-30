@@ -6,7 +6,7 @@ $third_color: white;
 $fourth_color: #d1d1d1;
 $fifth_color: #b1b1b1ef;
 
-.register-main {
+.register__page {
     padding: 0;
     border-top: 0.1rem solid $first_color;
     margin: 0 4em;
@@ -15,41 +15,77 @@ $fifth_color: #b1b1b1ef;
     align-items: center;
 
     fieldset {
-        border: 2px solid black;
+        border: 2px solid $fourth_color;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 30em;
+        margin-top: 2em;
+
+        legend {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: $first_color;
+        }
 
         form {
-            width: 10em;
-            border-style: solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-            input[type="name"] {
-                border: 1.5px solid rgb(102, 99, 99);
-                border-radius: 2px;
-                width: 13em;
-                height: 3em;
-                border-radius: 0.5em;
-                margin-right: 10px;
+            .type {
+                display: flex;
+                flex-direction: column;
+                margin: 0.5em;
+
+                input {
+                    border: 1.5px solid rgb(102, 99, 99);
+                    border-radius: 2px;
+                    width: 13em;
+                    height: 3em;
+                    border-radius: 0.5em;
+                    padding: 0 1em;
+                }
             }
 
-            input[type="text"] {
-                border: 1.5px solid rgb(102, 99, 99);
-                border-radius: 2px;
-                width: 13em;
-                height: 3em;
-                border-radius: 0.5em;
-                margin-right: 10px;
+            p {
+                border-top: 1px solid $fifth_color;
+                padding: 1em;
+                margin: 1em;
             }
 
-            input[type="number"] {
-                border: 1.5px solid rgb(102, 99, 99);
-                border-radius: 2px;
-                width: 13em;
-                height: 3em;
-                border-radius: 0.5em;
-                margin-right: 10px;
+            .privacy {
+                border: none;
+                text-align: center;
+                font-size: 0.8em;
+                color: $fourth_color;
+                margin: 0;
+                padding: 0 0 1em 0;
+            }
+
+            a {
+                font-weight: bold;
+                color: $second_color;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            button {
+                background-color: $first_color;
+                color: $third_color;
+                border-radius: 1em;
+                font-weight: bold;
+                font-size: 1em;
+                padding: 0.5em 1em;
+                margin: 0.5em;
+            }
+
+            button:hover {
+                color: $second_color;
             }
         }
     }

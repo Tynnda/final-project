@@ -1,7 +1,6 @@
 //Sass
 $my_font: "Nunito", sans-serif;
 $first_color: #1eafed;
-
 $second_color: #7ed8ff;
 $third_color: white;
 $fourth_color: #d1d1d1;
@@ -15,7 +14,7 @@ $fifth_color: #b1b1b1ef;
 }
 
 body {
-    background-color: white;
+    background-color: $third_color;
     position: relative;
     box-sizing: border-box;
 }
@@ -33,10 +32,14 @@ input::-webkit-calendar-picker-indicator {
 
 .loading {
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+        height: 6em;
+    }
 }
 
 //header ******************************************
@@ -49,7 +52,7 @@ input::-webkit-calendar-picker-indicator {
     margin: 0;
     position: sticky;
     top: 0;
-
+    // box-shadow: 0 0.25px 0 0 $fifth_color;
     z-index: 10;
     nav {
         a {

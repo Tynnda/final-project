@@ -42,28 +42,37 @@ export default function Login({ getUserInfo }) {
     };
 
     return (
-        <main className="main-login">
-            <form action="/" method="post" onSubmit={handleSubmit}>
-                <label>Email</label>
-                <br />
-                <input
-                    type="email"
-                    name="email"
-                    value={values.email}
-                    onChange={handleChange}
-                />
-                <label>Password</label>
-                <br />
-                <input
-                    type="password"
-                    name="password"
-                    value={values.password}
-                    onChange={handleChange}
-                />
-                <br />
+        <main className="login__page">
+            <fieldset>
+                <legend>Log in</legend>
+                    <form action="/" method="post" onSubmit={handleSubmit}>
+                        
+                        <div className="type">
+                            <label>Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                value={values.email}
+                                onChange={handleChange}
+                            />
+                        </div>
 
-                <button>Login</button>
-            </form>
+                        <div className="type">
+                            <label>Password</label>
+                            <input
+                                type="password"
+                                name="password"
+                                value={values.password}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        
+
+                        <button>Log in</button>
+                        <p>Don't have an account? <a href="/register">Sign up</a></p>
+                        
+                    </form>
+            </fieldset>
         </main>
     );
 }

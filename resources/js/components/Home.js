@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 
 //font awesome
@@ -10,19 +10,18 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 // import {  } from "@fortawesome/free-brands-svg-icons";
 
-const Home = () => {
+const Home = ( {user} ) => {
+    
     return (
         <main className="home">
             <div className="home__page">
                 <h1>Share your travel</h1>
                 <div className="home__page--buttons">
-                    <Link to="/search">
-                        <button>Search</button>
-                    </Link>
 
-                    <Link to="/offer">
-                        <button>Post</button>
-                    </Link>
+                    {user ? <Link to="/search"><button>Search</button></Link> : <Link to="/login"><button>Search</button></Link>}
+
+                    {user ? <Link to="/offer"><button>Post</button></Link> : <Link to="/login"><button>Post</button></Link>}
+
                 </div>
             </div>
 

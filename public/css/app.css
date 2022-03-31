@@ -103,7 +103,7 @@ input::-webkit-calendar-picker-indicator {
   background-color: white;
   display: flex;
   flex-direction: column;
-  margin: 12em 4em 0 0;
+  margin: 14.2em 4em 0 0;
   padding: 0.5em;
   border-radius: 1em 0;
   width: 10vw;
@@ -115,7 +115,10 @@ input::-webkit-calendar-picker-indicator {
 .header__hamburger div {
   display: flex;
   align-items: center;
-  padding: 0.1em;
+  padding: 0.3em;
+}
+.header__hamburger .border {
+  border-top: 0.3px solid #d1d1d1;
 }
 .header__hamburger a:hover {
   color: #1eafed;
@@ -260,6 +263,9 @@ main {
   padding: 0.7em 1em;
   margin: 0.5em;
 }
+.search__offers {
+  margin-bottom: 4em;
+}
 
 .footer {
   display: flex;
@@ -268,7 +274,7 @@ main {
   padding: 0;
   margin: 0;
   border-top: 0.1rem solid #1eafed;
-  margin: 3em 4em 0;
+  margin: 0 4em;
   /* position: absolute;
   bottom: 0;
   width: 100%; */

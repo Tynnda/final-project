@@ -35,7 +35,7 @@ const Chat = () => {
             offer_id: offerId,
             text: values.text,
         });
-        console.log(axios_response);
+        // console.log(axios_response);
         refreshPage();
         //
         // await getMessage();
@@ -58,7 +58,7 @@ const Chat = () => {
         });
     };
 
-    console.log(messages);
+    // console.log(messages);
     return (
         <main className="chat">
             <div className="chat__header">
@@ -73,9 +73,9 @@ const Chat = () => {
                             <p>{item.user.first_name}</p>
                         </div>
                         <p className="text">{item.text}</p>
-                        <p className="date">{item.created_at}</p>
+                        <p className="date">{item.created_at.substring(0, 10)}</p>
                     </div>
-                ))}
+                ))} 
             </div>
             <form className="chat__form" action="" method="post" onSubmit={handleSubmit}>
                 <FontAwesomeIcon className="icon" icon={faCirclePlus} />

@@ -8,7 +8,6 @@ $fifth_color: #b1b1b1ef;
 
 //ListOffer
 .search__offers {
-    // background-color: $second_color;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -16,9 +15,9 @@ $fifth_color: #b1b1b1ef;
     &__card {
         display: flex;
         margin: 1em;
-        border-radius: 1em;
-        background-color: $fourth_color;
+        border-radius: 0.3em;
         box-shadow: 2px 2px 2px 2px $fourth_color;
+        background-color: $fourth_color;
 
         &__left {
             display: flex;
@@ -85,6 +84,7 @@ $fifth_color: #b1b1b1ef;
                 border-top: 1.5px solid $fifth_color;
                 margin: 0;
                 padding: 0;
+                background-color: #ededed;
 
                 .money {
                     display: flex;
@@ -124,9 +124,10 @@ $fifth_color: #b1b1b1ef;
         .text {
             display: flex;
             flex-direction: column;
-            width: 20em;
-            height: 15em;
+            width: 22.2em;
+            height: 17em;
             padding: 1em;
+            font-size: 0.9em;
             background-color: $third_color;
         }
     }

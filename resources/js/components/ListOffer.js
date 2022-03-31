@@ -89,7 +89,7 @@ const ListOffer = ({ searchResults, loading }) => {
 
                             <div className="search__offers__card__right">
                                 <div className="text">
-                                    <p>{item.text}</p>
+                                    <p>{item.text.substring(0, 385)}</p>
                                 </div>
                                 <div className="row">
                                     <div className="money">
@@ -99,7 +99,7 @@ const ListOffer = ({ searchResults, loading }) => {
                                         />
                                         <p>
                                             {" "}
-                                            <strong>{item.price}</strong>
+                                            <strong>{item.price.substring(0, 13)}</strong>
                                         </p>
                                     </div>
 

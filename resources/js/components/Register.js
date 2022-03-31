@@ -35,7 +35,7 @@ const Register = ({ getUserInfo }) => {
 
             await getUserInfo();
 
-            console.log(response);
+            // console.log(response);
         } catch (error) {
             if (error.response.status == 422) {
                 setErrors(error.response.data.errors);

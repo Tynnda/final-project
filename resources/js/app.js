@@ -33,10 +33,10 @@ const App = () => {
         try {
             const { data } = await axios.get("/api/user");
             setUser(data);
-            console.log("user is logged in");
+            console.log("Logged in");
         } catch (error) {
             setUser(null);
-            console.log("user is not logged in");
+            console.log("NOT Logged in");
         }
     };
 

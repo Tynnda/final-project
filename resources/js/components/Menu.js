@@ -22,14 +22,12 @@ import { Link } from "react-router-dom";
 // import {  } from "@fortawesome/free-brands-svg-icons";
 
 const Menu = ({ openMenu, setOpenMenu, handleLogout }) => {
-    // const handleLogout = () => {
-    //     axios.post("/logout").then(() => (location.href = "/"));
-    // };
+
     const [user, setUser] = useState({});
 
     const fetchData = async () => {
         const { data } = await axios.get("/api/user");
-        console.log(data);
+        // console.log(data);
         setUser(data);
     };
 
@@ -80,21 +78,21 @@ const Menu = ({ openMenu, setOpenMenu, handleLogout }) => {
                         </Link>
                     </div>
 
-                    <div>
+                    <div className="border">
                         <FontAwesomeIcon className="icon" icon={faGear} />
                         <Link to="/my_profile">
                             <a>Settings</a>
                         </Link>
                     </div>
 
-                    <div>
+                    <div className="border">
                         <FontAwesomeIcon className="icon" icon={faComment} />
-                        <Link to="/chat">
+                        <Link to="/my_profile">
                             <a>Chat</a>
                         </Link>
                     </div>
 
-                    <div>
+                    <div className="border">
                         <FontAwesomeIcon
                             className="icon"
                             icon={faRightFromBracket}

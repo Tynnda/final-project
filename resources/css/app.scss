@@ -123,12 +123,11 @@ input::-webkit-calendar-picker-indicator {
         background-color: $third_color;
         display: flex;
         flex-direction: column;
-        margin: 12em 4em 0 0;
+        margin: 14.2em 4em 0 0;
         padding: 0.5em;
         border-radius: 1em 0;
         width: 10vw;
         position: absolute;
-        // border: $first_color solid;
         box-shadow: 0.1px 0.1px 1px 1px $fourth_color;
         right: 0;
         z-index: 12;
@@ -136,7 +135,11 @@ input::-webkit-calendar-picker-indicator {
         div {
             display: flex;
             align-items: center;
-            padding: 0.1em;
+            padding: 0.3em;
+        }
+
+        .border {
+            border-top: 0.3px solid $fourth_color;
         }
 
         a:hover {
@@ -307,6 +310,10 @@ main {
             margin: 0.5em;
         }
     }
+
+    &__offers {
+        margin-bottom: 4em;
+    }
 }
 
 //footer ******************************************
@@ -318,7 +325,7 @@ main {
     padding: 0;
     margin: 0;
     border-top: 0.1rem solid $first_color;
-    margin: 3em 4em 0;
+    margin: 0 4em;
     /* position: absolute;
     bottom: 0;
     width: 100%; */

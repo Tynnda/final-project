@@ -41,7 +41,7 @@ const Search = () => {
 
     const fetchData = async () => {
         const response = await axios.get("/api/offer");
-        console.log(response);
+        // console.log(response);
         setCountries(response.data);
     };
 
@@ -53,7 +53,7 @@ const Search = () => {
             dateFrom: values.dateFrom,
             dateTo: values.dateTo,
         });
-        console.log(response.data);
+        // console.log(response.data);
         setSearchResults(response.data);
         setLoading(false);
     };
@@ -70,24 +70,24 @@ const Search = () => {
     }, []);
 
     const handleClickFrom = (element) => {
-        console.log(element);
+        // console.log(element);
         setSelectionFrom(element);
         setCities(element.cities);
     };
     const handleClickTo = (element) => {
-        console.log(element);
+        // console.log(element);
         setSelectionTo(element);
         setCities(element.cities);
     };
 
     const citiesClickFrom = (element) => {
-        console.log(element.name);
+        // console.log(element.name);
         setValues({ ...values, from: element });
         setOpenListFrom(false);
         setOpenListTo(true);
     };
     const citiesClickTo = (element) => {
-        console.log(element.name);
+        // console.log(element.name);
         setValues({ ...values, to: element });
         setOpenListTo(false);
     };

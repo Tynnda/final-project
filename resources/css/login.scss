@@ -9,11 +9,11 @@ $fifth_color: #b1b1b1ef;
 .login__page {
     padding: 0;
     border-top: 0.1rem solid $first_color;
-    margin: 0 4em;
+    margin: 0 4em 4em;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 72vh;
+    height: 70vh;
 
     fieldset {
         border: 2px solid $fourth_color;

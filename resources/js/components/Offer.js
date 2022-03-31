@@ -61,7 +61,7 @@ const Offer = () => {
 
     const fetchSizes = async () => {
         const response = await axios.get("/api/sizes");
-        console.log(response.data);
+        // console.log(response.data);
         setSizes(response.data);
     };
 
@@ -250,11 +250,12 @@ const Offer = () => {
                             <h4>Describe your advertisement...</h4>
                             <textarea
                                 type="text"
-                                rows="20"
+                                rows="10"
+                                maxlength = "390"
                                 name="text"
                                 value={values.text}
                                 onChange={handleChange}
-                                placeholder="your advertisement"
+                                placeholder="your advertisement..."
                             ></textarea>
                             <br />
                             <h4>
@@ -269,7 +270,7 @@ const Offer = () => {
                             />
                         </div>
                         <br />
-                        <button>save</button>
+                        <button>Save</button>
                     </div>
                 </form>
 

@@ -68,7 +68,7 @@ const App = () => {
             </header>
 
             <Routes>
-                <Route exact path="/" element={<Home />} />
+                <Route exact path="/" element={<Home user={user} />} />
                 <Route exact path="/chat/:offer_id" element={<Chat />} />
                 <Route exact path="/search" element={<Search />} />
                 <Route exact path="/offer" element={<Offer />} />

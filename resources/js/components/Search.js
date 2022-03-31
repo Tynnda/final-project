@@ -193,7 +193,7 @@ const Search = () => {
                     {countries.map((element, i) => (
                         <div
                             key={element.id}
-                            onClick={() => handleClickFrom(element)}
+                            onClick={() => handleClickTo(element)}
                             className="countries-name"
                         >
                             <p>{element.name}</p>

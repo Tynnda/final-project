@@ -16,9 +16,9 @@ $fifth_color: #b1b1b1ef;
     position: absolute;
     z-index: 12;
     top: 11.8em;
-    left: 4em;
+    left: 14.5em;
     border-radius: 5px 5px 5px 5px;
-    box-shadow: 2px 4px 2px 4px rgb(182, 180, 180);
+    box-shadow: 2px 2px 2px 2px rgb(166, 183, 199);
 
     .countries-name {
         width: 7.3em;
@@ -43,10 +43,14 @@ $fifth_color: #b1b1b1ef;
     z-index: 12;
     top: 11.8em;
     border-radius: 5px 5px 5px 5px;
-    left: 55em;
-    box-shadow: 2px 4px 2px 4px rgb(182, 180, 180);
+    left: 65.5em;
+    box-shadow: 2px 2px 2px 2px rgb(166, 183, 199);
 
-    p:hover {
+    .cities-name {
+        padding: 5px;
+    }
+
+    .cities-name:hover {
         background-color: $second_color;
         border-radius: 7px;
     }

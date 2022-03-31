@@ -118,7 +118,7 @@ const Offer = () => {
                     onSubmit={handleSubmit}
                 >
                     <div className="form-heading">
-                        <h1>Post your offer</h1>
+                        <h1>List your offer</h1>
                     </div>
                     <div className="input-container">
                         <div className="offer-inputs">
@@ -130,7 +130,7 @@ const Offer = () => {
                                 name="departure_id"
                                 onChange={handleChange}
                                 value={values.from.name}
-                                placeholder="from"
+                                placeholder="From"
                                 autoComplete="off"
                             />
 
@@ -142,7 +142,7 @@ const Offer = () => {
                                 name="arrival_id"
                                 onChange={handleChange}
                                 value={values.to.name}
-                                placeholder="to"
+                                placeholder="To"
                                 autoComplete="off"
                             />
 
@@ -154,7 +154,7 @@ const Offer = () => {
                                 autoComplete="off"
                             />
                         </div>
-                        <h4>How much space do you offer?</h4>
+                        <h4>How much space do you have to offer?</h4>
                         <div className="form-images-container">
                             <img
                                 src="images/pocket.png"
@@ -247,30 +247,32 @@ const Offer = () => {
 
                     <div className="form-part2">
                         <div className="textarea-price">
-                            <h4>Describe your advertisement...</h4>
+                            <h4>Describe the type of space you have...</h4>
                             <textarea
                                 type="text"
                                 rows="10"
-                                maxlength = "390"
+                                maxlength="390"
                                 name="text"
                                 value={values.text}
                                 onChange={handleChange}
-                                placeholder="your advertisement..."
+                                placeholder="Your offer..."
                             ></textarea>
                             <br />
                             <h4>
-                                Set price for your offer... money?.. chocolate?
+                                Describe what type of payment you accept (Money?
+                                Chocolate? Beer?)
                             </h4>
                             <input
                                 type="text"
                                 name="price"
-                                placeholder="price"
+                                placeholder="Price"
                                 value={values.price}
                                 onChange={handleChange}
+                                autoComplete="off"
                             />
+                            <button>Save</button>
                         </div>
                         <br />
-                        <button>Save</button>
                     </div>
                 </form>
 

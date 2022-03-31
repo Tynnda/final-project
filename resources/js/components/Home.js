@@ -43,10 +43,10 @@ const Home = ({ user }) => {
                     <FontAwesomeIcon className="icon" icon={faEarthEurope} />
                     <h3>Search</h3>
                     <p>
-                        Would you like to bring a shipment from abroad or a
-                        package? Do you need something you cannot send in
-                        regular transport? Did you forget something? Here you
-                        can find service you need.
+                        Would you like to bring a shipment or package from
+                        abroad? Do you need something you can't send in regular
+                        transport? Did you forget something on your trip? We
+                        have the service you need.
                     </p>
                 </div>
 
@@ -54,9 +54,9 @@ const Home = ({ user }) => {
                     <FontAwesomeIcon className="icon" icon={faComments} />
                     <h3>Chat</h3>
                     <p>
-                        You choose the carrier according to the price and his
-                        evaluation. You can communicate with the carrier right
-                        here in the application.
+                        You choose the carrier according to the price and
+                        rating. You can communicate with the carrier here in the
+                        application.
                     </p>
                 </div>
 
@@ -65,14 +65,13 @@ const Home = ({ user }) => {
                         className="icon"
                         icon={faSuitcaseRolling}
                     />
-                    <h3>Offer</h3>
+                    <h3>List</h3>
                     <p>
-                        It does not where you travel... Do you have some extra
+                        It doesn't matter where you travel... Do you have extra
                         space in your baggage? Would you like to make some money
-                        or just do a good deed? You can offer only spce in your
-                        pocket, the volume does not matter. Either you can look
-                        for people who would like to bring something from your
-                        place or you can post an advertisement.
+                        or simply do a good deed? Any amount of space works-
+                        even your pocket. Find others with extra space or offer
+                        your own.
                     </p>
                 </div>
             </div>
@@ -95,13 +94,13 @@ const Home = ({ user }) => {
             </div>
 
             <div className="home__about">
-                <img src="images/empty.png" alt="empty" />
+                <img src="images/us.jpeg" alt="empty" />
                 <div>
                     <h3>About Us</h3>
                     <p>
-                        Hello, we are two junior developers who like to travel
-                        and therefore we decided to build Trashare as a final
-                        project in Cooding Bootcamp in Prague.
+                        Hello! We are two junior developers who like to travel
+                        and therefore we decided to build Trashare as our final
+                        project in Coding Bootcamp in Prague.
                     </p>
                 </div>
             </div>

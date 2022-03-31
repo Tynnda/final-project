@@ -1,21 +1,12 @@
 {
-<<<<<<< HEAD
-    "/js/index.js": "/js/index.js?id=95c44b20c4d3f18147aaec63b1b5d140",
+    "/js/index.js": "/js/index.js?id=7371cd9f8ee5d135ed7de2f61ac35a47",
     "/css/register.css": "/css/register.css?id=ec8014ea6936f91e861a7395b8bd5961",
-    "/css/search-list-countries-cities.css": "/css/search-list-countries-cities.css?id=10a41aa8c96e99c029c28484e0f89e9a",
-    "/css/offer-list-countries-cities.css": "/css/offer-list-countries-cities.css?id=be033beac71bfa257a25d8d985b74aa4",
-    "/css/offer.css": "/css/offer.css?id=2fe7b868c59c1b1b880024544c6dc5e4",
-    "/css/app.css": "/css/app.css?id=731b3c31a818b06a24d5223311425d51",
-=======
-    "/js/index.js": "/js/index.js?id=aff1f2862ad2cda7cef10445cb0b5b51",
-    "/css/register.css": "/css/register.css?id=3335fbc5f8d7ee8ae54a53283554d841",
     "/css/search-list-countries-cities.css": "/css/search-list-countries-cities.css?id=d8f845a19af9a2d75ef3efd4c9a6f112",
     "/css/offer-list-countries-cities.css": "/css/offer-list-countries-cities.css?id=be033beac71bfa257a25d8d985b74aa4",
-    "/css/offer.css": "/css/offer.css?id=e079b348ac37bf0257892b19d2ff41b9",
-    "/css/app.css": "/css/app.css?id=2f87d8b58f4d07c0ac5bd3602a96dbd4",
->>>>>>> main
+    "/css/offer.css": "/css/offer.css?id=2fe7b868c59c1b1b880024544c6dc5e4",
+    "/css/app.css": "/css/app.css?id=a09de93ba887b30acb9b94a0ce8f8489",
     "/css/profile.css": "/css/profile.css?id=282e4037be551f2d0aa52ae034f2b525",
     "/css/chat.css": "/css/chat.css?id=e59c1cc8b5dc3483f9c484d7b6eec13a",
-    "/css/listOffer.css": "/css/listOffer.css?id=1fa0d4ee3bcd7e7a87bfb79022aac7b2",
-    "/css/login.css": "/css/login.css?id=07021d3be85ae5b72c4cf000bb916b94"
+    "/css/listOffer.css": "/css/listOffer.css?id=c5c6e6245495740d08a545b3bd9fb777",
+    "/css/login.css": "/css/login.css?id=b1f379296bdbbf7a5d9627a15dad3246"
 }
